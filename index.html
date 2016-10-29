@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>MY V Bike rental</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta name="Bike rental" content="Presentation website">
+			 <!-- css -->
+			<link rel="stylesheet" type="text/css" href="index.css">
+			<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			
+			<!--<iframe src="http://free.timeanddate.com/clock/i5fpvar2/n1446/tct/pct/ftb/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="90" height="34" allowTransparency="true"></iframe>-->
+
+	</head>
+
+
+
+	<body>
+	<header>
+		<h3>MY V Bike Rental</h3>
+				
+		<a name="top"></a> 
+			
+			<ul class="topnav" id="myTopnav">
+				<li><a class="active" href="index.html"><strong>Home</strong></a></li>
+				<li><a href="price.html"><strong>Price list</strong></a></li>
+				<li><a href="reservation.html"><strong>Book a bike</strong></a></li>
+				<li><a href="contacts.php"><strong>Contact</strong></a></li>
+			
+				<li class="icon">
+					<a href="javascript:void(0);" onclick="myFunction()">
+						<img src="imForSite/glyphicons-114-justify.png" alt="glyphicon menu">
+					</a>
+				</li>
+			</ul>
+
+	</header>		
+			
+		<section class="main">
+			<img src="imForSite/road.jpg" style = "width:100%">
+			<div class="container-fluid text-center">
+				<div class="col-sm-2">
+					<a href="#top" class="goUpButton">	
+						<p><span class="glyphicon glyphicon-menu-up"></span> </p>
+						<p><span class="glyphicon glyphicon-menu-up"></span> </p>
+					</a>	
+				</div>
+				
+				<div class="col-sm-8">
+				
+					<h4> Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+					totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, 
+					explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur 
+					magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia 
+					dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et 
+					dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 
+					suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in 
+					ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla 
+					pariatur? [33] At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum 
+					deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, 
+					similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem 
+					rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil 
+					impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+					Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae 
+					sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus 
+					maiores alias consequatur aut perferendis doloribus asperiores repellat.
+					</h4>
+					
+					<button type="button" class="ourOfferBtn"> <a href="price.html" class="ourOffer">Our offer</a></button>	
+						
+					</a>
+				</div>
+				<div class="col-sm-2">
+				</div>
+			
+			</div>
+			
+			
+		</section>	
+		
+		
+			<footer class="container-fluid">
+			<div class="col-sm-6">
+			</div>
+			<div class="col-sm-6">
+				<div id="map" style="width:300px;height:300px;">MY V Bike</div>
+				</div>
+			</footer>
+			
+			<!-- script -->
+		<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+		</script>
+		<script>
+		function myMap() {
+		var myCenter = new google.maps.LatLng(51.261714, 22.597164);
+		  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+
+  var infowindow = new google.maps.InfoWindow({
+    content: "MY V Bikes"
+  });
+  infowindow.open(map,marker);
+}
+</script>
+			
+			
+		<script type="text/javascript" src="http://qoo.by/counter.js"></script>	
+		<script type='text/javascript' src='animation.js'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+		
+		
+
+	</body>
+</html>
