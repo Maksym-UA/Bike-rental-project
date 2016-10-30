@@ -80,12 +80,48 @@
 		</section>	
 		
 		
-			<footer class="container-fluid">
-			<div class="col-sm-6">
-			</div>
-			<div class="col-sm-6">
-				<div id="map" style="width:300px;height:300px;">MY V Bike</div>
+			<footer class="container-fluid" id="foot">
+				<div class="col-sm-8" id ="brands">
 				</div>
+				<div class="col-sm-4" id="contactInfo">
+					<p><h4>MY V Bike Rental</h4></p>
+					<p><h5>20-250, I.Daszynskiego, 3a</h5></p>
+					<p><h5>Lublin, Poland</h5></p>
+					<p><h5>Business Hours: 10a-7p Mon-Sat, 12p-6p Sun </h5></p>
+					<p><h5>E-mail:</h5></p>
+					<p><h5>Tel:</h5></p>
+									
+					<!-- <div id="map" style="width:350px;height:300px;">MY V Bike</div>-->
+				</div>
+				<div id="socialRow">
+					<ul class="socialMedia">
+						<li id="facebook"><a href="url">
+								<img src="imForSite/facebook.png">
+							</a>
+						</li>
+						<li id="google"><a href="url">
+								<img src="imForSite/google-logo.png">
+							</a>
+						</li>
+						<li id="linkedin"><a href="url">
+								<img src="imForSite/linkedin-logo.png">
+							</a>
+						</li>
+						<li id="skype"><a href="url">
+								<img src="imForSite/skype-logo.png">
+							</a>
+						</li>
+						<li id="whatsapp"><a href="url">
+								<img src="imForSite/whatsapp-logo.png">
+							</a>
+						</li>
+						<li id ="twitter"><a href="url">
+								<img src="imForSite/twitter-logo.png">
+							</a>
+						</li>
+						
+					</ul>
+				</div>	
 			</footer>
 			
 			<!-- script -->
@@ -101,18 +137,18 @@
 		</script>
 		<script>
 		function myMap() {
-		var myCenter = new google.maps.LatLng(51.261714, 22.597164);
-		  var mapCanvas = document.getElementById("map");
-  var mapOptions = {center: myCenter, zoom: 15};
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-  var marker = new google.maps.Marker({position:myCenter});
-  marker.setMap(map);
+			var myCenter = new google.maps.LatLng(51.261714, 22.597164);
+			  var mapCanvas = document.getElementById("map");
+			  var mapOptions = {center: myCenter, zoom: 15};
+			  var map = new google.maps.Map(mapCanvas, mapOptions);
+			  var marker = new google.maps.Marker({position:myCenter});
+			  marker.setMap(map);
 
-  var infowindow = new google.maps.InfoWindow({
-    content: "MY V Bikes"
-  });
-  infowindow.open(map,marker);
-}
+			  var infowindow = new google.maps.InfoWindow({
+				content: "MY V Bike"
+			  });
+			  infowindow.open(map,marker);
+		}
 </script>
 			
 			

@@ -34,11 +34,13 @@ ul.topnav {
 	justify-content: center;
     align-items: center;
 	padding-top: 30px;
+	
 }
 
 ul.topnav li {
 	position: relative;
 	float: left;
+	
 	
 	
 }
@@ -185,8 +187,8 @@ a.goUpButton{
 	color: white;
 	position:fixed;
 	margin:auto;
-	right: 6%;
-	bottom: 5%;
+	right: 5%;
+	bottom: 10%;
 	z-index: 3;
 	background: #000000; 
 	box-shadow: 0 6px 16px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.25);
@@ -204,7 +206,7 @@ a:hover.goUpButton {
 
 .main .col-sm-8{
 	background:#ffffff;
-	padding:45px 35px 0px 35px;
+	padding:45px 35px 10px 35px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	text-align: left;
 }
@@ -217,8 +219,7 @@ a:hover.goUpButton {
     color: white;
     padding: 10px 24px;
     font-size: 16px;
-	display: flex;
-    
+	display: flex;    
 }
 
 .ourOffer{
@@ -228,77 +229,71 @@ a:hover.goUpButton {
   color: white;
 }
 
-.ourOfferBtn:hover{
-	background-color:#009933;
-}
+.ourOfferBtn:hover{	background-color:#009933;}
 
-.col-sm-8 .col-sm-10, .col-sm-8 .col-sm-12{
-	padding:5px 15px 5px 0px;
-	margin: 15px 0px 25px 0px;
-	/*box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);*/ 
-}
+.ourOfferBtn a:hover{color:white; text-decoration:none;}
 
-.col-sm-8 .col-sm-4{
-	width: 30%;
-	padding: 1px 10px 1px 10px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	color: #000000;
-	background-color: #ffffff;
-}
+
 
 /*-----------------------footer--------------------*/
 
 footer {
   font-size: 12px;
   width:100%;
- 
   color: black;
-}
-footer #map{z-index:5;}
-footer .row{
-	padding: 10px;
+  
 }
 
-footer .row ul {
+#foot{padding: 15px 0px 0px 0px;  }
+
+#brands{
+	height: 190px;
+	border-right: 2px solid black;
+}
+
+#socialRow{
+	position: relative;
+	display: inline-block;
+	width:100%;
+	background-color: #cccccc;
+}
+
+.socialMedia{
 	display: flex;
     justify-content: center;
     align-items: center;
-	margin-top: 10px;
-	padding-left: 0px;
-}
-
-footer .col-sm-4{
-	/*padding: 15px;*/
-	vertical-align: middle;
+	list-style-type: none;
+	margin: 0px;
+	padding: 10px;
+	
 	
 }
 
-footer .row ul .col-sm-2 {
-  list-style: none;
-  padding:5px 0px 5px 0px;
-  text-align: center;
-  /*margin: auto;*/
- }
+.socialMedia li {padding: 10px 15px;}
 
-footer .row div:nth-child(2){
-	border-right: 1px solid #333333;
-	border-left: 1px solid #333333;
+#facebook{
+	background-color: #3b5998;
+}
+
+#google{
+	background-color:  #d34836;
+}
+#linkedin{
+	background-color: #0077B5;
+}
+#skype{
+	background-color: #12a5f4;
+}
+#whatsapp{
+	background-color:  #34af23;
+}
+#twitter{
+	background-color: #0084b4;
 }
 
 
 footer li  img{
-  width: 28px;
-  background: black;
+  width: 24px;
 }
 
-footer #logo{
-	vertical-align: middle;
-	padding: 0px;
-	width: 150px;
-}
-
-
-footer .col-sm-4 #qoo-counter{
-	float:right;
-	margin: 15px 0px 15px 0px;
-}
+footer #map{z-index:5;}
