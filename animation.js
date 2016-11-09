@@ -1,16 +1,18 @@
 $(document).ready(function(){
 	$('#selectAll').addClass('active');
 	var amountScrolled = 380;
-
-	$(window).scroll(function() {
+	
+	
+	window.onscroll = function() {myFunction()};
+	
+	function myFunction() {
 		if ( $(window).scrollTop() > amountScrolled ) {
 			$('a.goUpButton').fadeIn('slow');
 		} else {
 			$('a.goUpButton').fadeOut('slow');
 		}
-	});
-	
-	
+	}
+
 	$('a.goUpButton').click(function() {
 	$('html, body').animate({
 		scrollTop: 0
@@ -18,54 +20,30 @@ $(document).ready(function(){
 	return false;
 	});
 	
-	$('.thumbnail,.animation-item').each(function(){
+	
+	
+	$(".GaugeMeter").each(function(){
 		var width = $(window).width();//current
-		var imgHeight = $(this).height();//current
-		var imgWidth=$(this).width();//current
-		var maxHeight=225;
-		var ratio = 0;
 		console.log(width);
+		var x = document.getElementsByClassName(".animCircles");
+		console.log(x);
 		
-		if(width >= 200){
-			$(this).attr('height', imgWidth/1.68);
+		if(width <768){
+			$(".GaugeMeter").attr("data-size", 80);
+			$(".GaugeMeter").attr("data-width", 8);
+			$(".GaugeMeter").toggleClass('changed');			
 		}
+	});
+	
+	var height = $(window).height();//current
+	
 		
-	});
 	
-	$('#selectAll').click(function(){
-		$('.row.picture, .row.animation, .row.logo, .rowName').fadeIn();
-		$('#animSel,#graphicSel, #logoSel').removeClass('active');
-		$(this).addClass('active');
-		
-	});
-	
-	
-	$('#graphicSel').click(function(){
-		$('.row.animation, .row.logo, .rowName').hide();
-		$('#selectAll, #animSel, #logoSel').removeClass('active');
-		$(this).addClass('active');
-		$('.row.picture').each(function(){
-			$(this).fadeIn();
-		});
-	});
-	
-	
-	
-	$('#animSel').click(function(){
-		$('.row.picture, .row.logo, .rowName').hide();
-		$('#selectAll, #graphicSel, #logoSel').removeClass('active');
-		$(this).addClass('active');
-		$(".row.animation").each(function(){
-			 $(this).fadeIn();
-		});
-	});
-	
-	$('#logoSel').click(function(){
-		$('.row.picture, .row.animation, .rowName').hide();
-		$('#selectAll, #graphicSel, #animSel').removeClass('active');
-		$(this).addClass('active');
-		$('.row.logo').each(function(){
-			$(this).fadeIn()
-			});	
-	});
+	$(window).on("scroll",function() {
+		if ( $(window).scrollTop() >height/2 ) {
+			
+			$(".GaugeMeter").gaugeMeter();
+			$(window).off("scroll");
+		}
+	});		
 });
