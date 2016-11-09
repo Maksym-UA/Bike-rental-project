@@ -11,24 +11,32 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 			
 			<!--<iframe src="http://free.timeanddate.com/clock/i5fpvar2/n1446/tct/pct/ftb/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="90" height="34" allowTransparency="true"></iframe>-->
-
+			<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">	
+			
+			<style>
+				
+			</style>
 	</head>
 
 
 
 	<body>
 	<header>
-		<h3>MY V Bike Rental</h3>
-				
+	
+		<ul class="logoName"id="Name">
+			<img src="imForSite/motorbike.gif">
+			<h1 class="companyName">MY V Bike Rental</h1>
+		</ul>
+		
 		<a name="top"></a> 
 			
 			<ul class="topnav" id="myTopnav">
-				<li><a class="active" href="index.html"><strong>Home</strong></a></li>
-				<li><a href="price.html"><strong>Price list</strong></a></li>
-				<li><a href="reservation.html"><strong>Book a bike</strong></a></li>
-				<li><a href="contacts.php"><strong>Contact</strong></a></li>
+				<li id="leftMenuItem"><a class="active" href="index.html" id="home"><strong>Home</strong></a></li>
+				<li id="leftMenuItem"><a href="price.html" id="price"><strong>Price list</strong></a></li>
+				<li id="leftMenuItem"><a href="reservation.html" id="reservation"><strong>Book a bike</strong></a></li>
+				<li id="leftMenuItem"><a href="contacts.php" id="contacts"><strong>Contact</strong></a></li>
 			
-				<li class="icon">
+				<li class="icon" >
 					<a href="javascript:void(0);" onclick="myFunction()">
 						<img src="imForSite/glyphicons-114-justify.png" alt="glyphicon menu">
 					</a>
@@ -37,8 +45,54 @@
 
 	</header>		
 			
+			
+			
+			
 		<section class="main">
-			<img src="imForSite/road.jpg" style = "width:100%">
+			<div class="col-sm-12" id="slide">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+					  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					  <li data-target="#myCarousel" data-slide-to="1"></li>
+					  <li data-target="#myCarousel" data-slide-to="2"></li>
+					  <li data-target="#myCarousel" data-slide-to="3"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+
+						<div class="item active">
+							<img src="imForSite/road1.jpg" alt="Road to mountains" width="860" height="345">
+						</div>
+
+						<div class="item">
+							<img src="imForSite/Road_to_mountains1.jpg" alt="Road to mountains" width="860" height="345">
+						</div>
+						
+						<div class="item">
+							<img src="imForSite/road1.jpg" alt="Road to mountains" width="860" height="345">
+						</div>
+
+						<div class="item">
+							<img src="imForSite/Road_to_mountains1.jpg" alt="Road to mountains" width="860" height="345">
+						</div>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					  <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					  <span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		
+			<!--<img src="imForSite/road.jpg" style = "width:100%">-->
+			
 			<div class="container-fluid text-center">
 				<div class="col-sm-2">
 					<a href="#top" class="goUpButton">	
@@ -47,7 +101,7 @@
 					</a>	
 				</div>
 				
-				<div class="col-sm-8">
+				<div class="col-sm-8" >
 				
 					<h4> Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
 					totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, 
@@ -67,32 +121,71 @@
 					maiores alias consequatur aut perferendis doloribus asperiores repellat.
 					</h4>
 					
-					<button type="button" class="ourOfferBtn"> <a href="price.html" class="ourOffer">Our offer</a></button>	
-						
-					</a>
+					
+					<div class="row animation">
+						<ul class="animCircles">
+							<li id="animItem">
+								<div class="GaugeMeter" id="PreviewGaugeMeter_4" data-percent="56" data-used="50" data-total="50" data-append=null  data-size="170" data-theme="LightBlue-DarkBlue" 
+								data-back=null data-animate_gauge_colors=null data-animate_text_colors=null data-width="15" data-label="customers" data-label_color="#333333" data-stripe=null></div>
+							</li>
+							
+							<li id="animItem">
+								<div class="GaugeMeter" id="PreviewGaugeMeter_4" data-percent="74" data-used="74" data-total="74" data-prepend=null data-append=null  data-size="170" data-theme="Red-Green"
+								data-back=null data-animate_gauge_colors="1" data-animate_text_colors=null data-width="15" data-style= "Arch" data-label="rents" data-label_color="#333333" data-stripe=null></div>
+							</li>
+							
+							<li id="animItem">
+								<div class="GaugeMeter" id="PreviewGaugeMeter_4" data-percent="15" data-used="15" data-total="18" data-prepend=null data-append=null  data-size="170" data-theme="LightBlue-DarkBlue" 
+								data-back=null data-animate_gauge_colors="1" data-animate_text_colors=null data-width="15" data-label="bikes" data-label_color="#333333" data-stripe=null></div>
+							</li>
+						</ul>
+					</div>
+					<div class="row orderBtn">
+						<button type="button" class="ourOfferBtn"> <a href="price.html" class="ourOffer"><strong>Our offer</strong></a></button>	
+					</div>
 				</div>
+				
+				
+				
 				<div class="col-sm-2">
 				</div>
-			
 			</div>
-			
-			
 		</section>	
 		
 		
 			<footer class="container-fluid" id="foot">
-				<div class="col-sm-8" id ="brands">
+			
+			<div class="col-sm-2">
+			</div>
+			<div class="col-sm-8 about" >
+				<div class="col-sm-4" id ="siteMap">
+					<p><h4><strong>Site map</strong></h4></p>
+					<p><a href="index.html"><h5>Home</h5></a></p>
+					<p><a href="price.html"><h5>Price list</h5></a></p>
+					<p><a href="reservation.html"><h5>Book a bike</h5></a></p>
+					<p><a href="contacts.php"><h5>Contact</h5></a></p>
 				</div>
+				<div class="col-sm-4 " id ="brands">
+					<p><h4><strong>Partners</strong></h4></p>
+					<p><a id="Honda" href="http://powersports.honda.com/" target="_blank"><h5>Honda</h5></a></p>
+					<p><a id="Kawasaki"href="https://www.kawasaki.com/" target="_blank"><h5>Kawasaki</h5></a></p>
+					<p><a id="Suzuki" href="http://www.suzuki-moto.com/" target="_blank"><h5>Suzuki</h5></a></p>
+					<p><a id="Yamaha" href="https://www.yamahamotorsports.com/motorcycle" target="_blank"><h5>Yamaha</h5></a></p>
+				</div>
+				
 				<div class="col-sm-4" id="contactInfo">
-					<p><h4>MY V Bike Rental</h4></p>
-					<p><h5>20-250, I.Daszynskiego, 3a</h5></p>
+					<p><h4 ><strong>MY V Bike Rental</strong></h4></p>
+					<p><h5><strong>Address:</strong> 20-250, I.Daszynskiego, 3a</h5></p>
 					<p><h5>Lublin, Poland</h5></p>
-					<p><h5>Business Hours: 10a-7p Mon-Sat, 12p-6p Sun </h5></p>
-					<p><h5>E-mail:</h5></p>
-					<p><h5>Tel:</h5></p>
+					<p><h5><strong>Business Hours:</strong> 10a-7p Mon-Sat, 12p-6p Sun </h5></p>
+					<p><h5><strong>E-mail:</strong> myvbikes@gmail.com</h5></p>
+					<p><h5><strong>Tel:</strong> +12345678</h5></p>
 									
 					<!-- <div id="map" style="width:350px;height:300px;">MY V Bike</div>-->
 				</div>
+			</div>
+			<div class="col-sm-2">
+			</div>
 				<div id="socialRow">
 					<ul class="socialMedia">
 						<li id="facebook"><a href="url">
@@ -122,6 +215,9 @@
 						
 					</ul>
 				</div>	
+				<div id ="rights">
+				<h5>MY V Bike Rental &copy 2016</h5>
+				</div>
 			</footer>
 			
 			<!-- script -->
@@ -135,30 +231,39 @@
 			}
 		}
 		</script>
-		<script>
-		function myMap() {
-			var myCenter = new google.maps.LatLng(51.261714, 22.597164);
-			  var mapCanvas = document.getElementById("map");
-			  var mapOptions = {center: myCenter, zoom: 15};
-			  var map = new google.maps.Map(mapCanvas, mapOptions);
-			  var marker = new google.maps.Marker({position:myCenter});
-			  marker.setMap(map);
+		
+		
 
-			  var infowindow = new google.maps.InfoWindow({
-				content: "MY V Bike"
-			  });
-			  infowindow.open(map,marker);
-		}
-</script>
-			
-			
+		
+		<!-------------------google maps scrypt----------------->
+		<script>
+			function myMap() {
+				var myCenter = new google.maps.LatLng(51.261714, 22.597164);
+				  var mapCanvas = document.getElementById("map");
+				  var mapOptions = {center: myCenter, zoom: 15};
+				  var map = new google.maps.Map(mapCanvas, mapOptions);
+				  var marker = new google.maps.Marker({position:myCenter});
+				  marker.setMap(map);
+
+				  var infowindow = new google.maps.InfoWindow({
+					content: "MY V Bike"
+				  });
+				  infowindow.open(map,marker);
+			}
+		</script>
+		
+		
+					
 		<script type="text/javascript" src="http://qoo.by/counter.js"></script>	
 		<script type='text/javascript' src='animation.js'></script>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 		
-		
-
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
+		<script src="jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script> 
+				
 	</body>
 </html>

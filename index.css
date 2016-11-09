@@ -7,78 +7,94 @@ body {margin:0;}
     padding: 15px;
 }
 
-header {
+@font-face {
+	font-family: 'Kelvinized';
+	src: url('data/Kelvinized.ttf') format('truetype');
+}
+
+header{
 	display: inline;
 	padding: 0px;
 }
 
-header h3{
+.companyName{
+	font-family: 'Kelvinized', Turnpike, Hardman; 
 	text-align: center;
+	font-size: 2.8em;	
 }
 
-header img{
-	width: 100%;
-	margin: auto;
-	display: block;
-}
-
-
-ul.topnav {
+.logoName{
 	display: flex;
-	z-index:10;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+	padding-left: 0px;
+}
+
+.logoName img {
+	display: inline-block;
+	width: 11%;
+	margin-right: 20px;
+}
+
+.topnav {
+	display: flex;
+	z-index:3;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 	background-color: white;
 	justify-content: center;
-    align-items: center;
-	padding-top: 30px;
-	
+    align-items: center;	
 }
-
-ul.topnav li {
-	position: relative;
-	float: left;
-	
-	
-	
-}
-
-#logo{	
-	width: 76px;
-	padding: 0px 10px 0px 10px;
-}
-
-#myTopnav li.languages{
-	float: right;
-}
-
-
 
 ul.topnav li a {
 	position: relative;
   display: inline-block;
   color: black;
   text-align: center;
-  padding: 8px 16px;
+  padding: 6px 16px;
   text-decoration: none;
-  transition: 0.3s;
-  font-size: 17px;
+  font-size: 20px;
+  border-bottom: 4px solid rgba(192, 192, 192, 0);
+	-webkit-transition: border 500ms ease;
+  -moz-transition: border 500ms ease;
+  -ms-transition: border 500ms ease;
+  -o-transition: border 500ms ease;
+  transition: border 500ms ease;
  }
-
-
 
 ul.topnav li a:link {
 	color:black;
 } 
 
+#leftMenuItem:nth-child(1) a:not(.active):hover{
+	border-bottom: 4px solid rgba(102, 0, 34, 1);
+}
 
-ul.topnav li:not(:last-child) a:hover, ul.topnav li:not(:last-child) li a:active {
+#leftMenuItem:nth-child(2) a:not(.active):hover{
+	border-bottom: 4px solid rgba(255, 0, 0, 1);
+}
+
+#leftMenuItem:nth-child(3) a:hover{
+	border-bottom: 4px solid rgba(0, 122, 204, 1);
+}
+
+#leftMenuItem:nth-child(4) a:hover{
+	border-bottom: 4px solid rgba(230, 184, 0, 1);
+}
+
+
+/*ul.topnav li:not(:last-child) a:hover, ul.topnav li:not(:last-child)  {
 	z-index:3;
 	color: black;
-	border-bottom: 4px solid red;
-	
+
+}*/
+
+#myTopnav .active{
+	border-bottom: 4px solid #009933;
+	z-index:5;
 }
 
 ul.topnav li.icon {display: none;}
@@ -88,14 +104,69 @@ header #myTopnav li.icon img{
 	width:25px;
 }
 
-#myTopnav .active{
-	border-bottom: 4px solid #009933;
-}
+
 
 /*---------------------------------media query--------------------*/
 
-/*@media only screen and (min-width: 600px) {
-    
+
+
+@media screen and (max-width:680px) {
+  ul.topnav li{display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+	z-index:0;
+  }
+}
+
+@media screen and (max-width:680px) {
+	
+	
+	.companyName{
+	font-size: 1.2em;
+	}
+	
+  ul.topnav.responsive {position: relative;display: block;}
+  ul.topnav.responsive li.icon {
+    position: relative;
+	z-index:5;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+	position: relative;
+    float: none;
+    display: block;
+  }
+  
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: center;
+  }
+  
+  ul.topnav.responsive li a:hover { background-color: #f2f2f2;}
+  
+	.main .col-sm-8 .col-sm-4 {width: 200px;}
+	
+	#myTopnav li.languages{float: none;
+	}
+	
+	.about{
+		display: flex;
+		justify-content: center;
+	align-items: top;
+	}	
+}
+
+
+
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
     .col-m-1 {width: 8.33%;}
     .col-m-2 {width: 16.66%;}
     .col-m-3 {width: 25%;}
@@ -110,7 +181,7 @@ header #myTopnav li.icon img{
     .col-m-12 {width: 100%;}
 }
 @media only screen and (min-width: 768px) {
-   
+    /* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -123,44 +194,9 @@ header #myTopnav li.icon img{
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
-}*/
-
-@media screen and (max-width:680px) {
-  ul.topnav li{display: none;}
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block;
-	z-index:3;
-  }
 }
 
-@media screen and (max-width:680px) {
-  ul.topnav.responsive {position: relative;display: block;}
-  ul.topnav.responsive li.icon {
-    position: absolute;
-	z-index:5;
-    right: 0;
-    top: 0;
-  }
-  ul.topnav.responsive li {
-	  position: relative;
-    float: none;
-    display: block;
-	
-	
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: center;
-  }
-  
-  ul.topnav.responsive li a:hover { background-color: #f2f2f2;}
-  
-	.main .col-sm-8 .col-sm-4 {width: 200px;}
-	
-	#myTopnav li.languages{float: none;
-	}
-}
+
 
 /*--------------------------------main section-------------------------------*/
 
@@ -169,33 +205,41 @@ header #myTopnav li.icon img{
 	
 }
 
-
 .main .col-sm-2{
 	display: block;
 }
 
-
 .main .goUpButton :nth-child(1){
 	padding-top:10%;
 	margin-bottom: -12px;
-	
 }
+
+#slide{
+	padding:0px;
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+  
+
 a.goUpButton{
 	display: none;
 	width:40px;
 	height: 40px;
-	color: white;
+	color: black;
 	position:fixed;
 	margin:auto;
 	right: 5%;
-	bottom: 10%;
+	bottom: 15%;
 	z-index: 3;
-	background: #000000; 
-	box-shadow: 0 6px 16px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.25);
-	-webkit-border-radius: 10px;
+	background: rgba(128, 128, 128, 0.6);
+	box-shadow: 0 3px 4px 0px rgba(0,0,0,0.5), 0 3px 4px 0px rgba(0,0,0,0.5);
+	/*-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
-	border-radius: 10px;
-	
+	border-radius: 10px;*/
 }
 
 a:hover.goUpButton {
@@ -203,30 +247,59 @@ a:hover.goUpButton {
 	color: white;
 }
 
-
 .main .col-sm-8{
 	background:#ffffff;
 	padding:45px 35px 10px 35px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	/*-webkit-box-shadow: 0 8px 6px -6px grey;
+  -moz-box-shadow: 0 8px 6px -6px grey;*/
+  box-shadow: 0 8px 5px -5px grey;
+	   
 	text-align: left;
 }
 
+/*To not see any shadow on the sides, the (absolute value of the) spread radius (4th parameter) needs to be the same as the blur radius (3rd parameter).*/
+
+
+.animation{
+	padding: 25px 0px 25px 0px;
+}
+
+
+.animCircles {
+		display: flex;
+		padding-left: 0px;
+}
+
+.animCircles li{
+		display: inline;
+		margin: auto;
+}
+
+.GaugeMeter{
+	margin-right: 0px;
+}
+
+
+.orderBtn{
+	display: block;
+	padding: 0px 0px 25px 0px;
+}
+
 .ourOfferBtn{
+	display: block;
 	margin: auto;
 	background-color: #4CAF50; /* Green */
     border: none;
-	border-radius: 4px;
+	
     color: white;
-    padding: 10px 24px;
-    font-size: 16px;
+    padding: 10px 25px;
+    font-size: 18px;
 	display: flex;    
 }
 
 .ourOffer{
 	text-decoration: none;
-  transition: 0.3s;
-  font-size: 17px;
-  color: white;
+    color: white;
 }
 
 .ourOfferBtn:hover{	background-color:#009933;}
@@ -241,21 +314,45 @@ footer {
   font-size: 12px;
   width:100%;
   color: black;
-  
+  background-color: #e6e6e6;
+  margin-top:15px;
 }
 
-#foot{padding: 15px 0px 0px 0px;  }
+#foot{padding: 0px 0px 0px 0px;}
 
-#brands{
-	height: 190px;
-	border-right: 2px solid black;
+#siteMap, #brands, #contactInfo{
+	padding: 0px;
 }
+
+#siteMap a, #brands a{
+	 text-decoration: none;
+	 color: black;
+	 border-bottom: 4px solid rgba(192, 192, 192, 0);
+	-webkit-transition: border 500ms ease;
+  -moz-transition: border 500ms ease;
+  -ms-transition: border 500ms ease;
+  -o-transition: border 500ms ease;
+  transition: border 500ms ease;
+}
+
+#siteMap a:link, #brands a:link {
+	color:black;
+} 
+
+#Honda:hover{border-bottom: 4px solid rgba(231, 24, 55, 1.0);}
+
+#Kawasaki:hover{border-bottom: 4px solid rgba(84, 220, 48, 1.0);}
+
+#Suzuki:hover{border-bottom: 4px solid rgba(0, 11, 16, 1.0);}
+
+#Yamaha:hover{border-bottom: 4px solid rgba(255, 51, 51, 1.0);}
+
 
 #socialRow{
 	position: relative;
 	display: inline-block;
 	width:100%;
-	background-color: #cccccc;
+	background-color: #808080;
 }
 
 .socialMedia{
@@ -265,35 +362,107 @@ footer {
 	list-style-type: none;
 	margin: 0px;
 	padding: 10px;
-	
-	
 }
 
-.socialMedia li {padding: 10px 15px;}
-
-#facebook{
-	background-color: #3b5998;
+.socialMedia li {
+	padding: 8px 15px;
+	margin:2px;
 }
 
-#google{
-	background-color:  #d34836;
-}
-#linkedin{
-	background-color: #0077B5;
-}
-#skype{
-	background-color: #12a5f4;
-}
-#whatsapp{
-	background-color:  #34af23;
-}
-#twitter{
-	background-color: #0084b4;
-}
+#facebook{background-color: #3b5998;}
+
+#google{background-color:  #d34836;}
+
+#linkedin{background-color: #0077B5;}
+
+#skype{background-color: #12a5f4;}
+
+#whatsapp{background-color:  #34af23;}
+
+#twitter{background-color: #0084b4;}
 
 
-footer li  img{
-  width: 24px;
-}
+footer li  img{width: 24px;}
 
 footer #map{z-index:5;}
+
+#rights{
+	position: relative;
+	display: inline-block;
+	width:100%;   
+	color: white;
+	background-color: #333333;
+	padding: 0px ;
+	text-align: center;
+}
+
+/*----------------gaugemeter----------------------*/
+.GaugeMeter {
+					
+				  position: Relative;
+				  text-align: Center;
+				  overflow: Hidden;
+				  cursor: Default;
+				  display: block;
+				 
+				}
+
+				.GaugeMeter::after {
+				  content: "";
+				  display: block;
+				  width: 90px;
+				  height: 2px;
+				  background: rgba(0,0,0,0.1);
+				  border-radius: 50%;
+				  box-shadow: 0 0 3px 4px rgba(0,0,0,0.1);
+				  margin: 5px auto;
+				  
+				}
+				/*You can't manipulate :after, because it's not technically part of 
+				the DOM and therefore is inaccessible by any JavaScript. But you can 
+				add a new class with a new :after specified.*/
+				
+				.GaugeMeter.changed:after {
+					content: "";
+				  display: block;
+				  width: 35px;
+				  height: 2px;
+				  background: rgba(0,0,0,0.1);
+				  border-radius: 50%;
+				  box-shadow: 0 0 1.5px 2px rgba(0,0,0,0.1);
+				  margin: 5px auto;
+					
+				}
+
+				.GaugeMeter SPAN, .GaugeMeter B {
+				  width: 54%;
+				  position: Absolute;
+				  text-align: Center;
+				  display: Inline-Block;
+				  color: RGBa(255,0,0,.8);
+				  font-weight: 100;
+				  font-family: "Open Sans", Arial;
+				  overflow: Hidden;
+				  white-space: NoWrap;
+				  text-overflow: Ellipsis;
+				  margin: 0 23%;
+				}
+
+				.GaugeMeter[data-style="Semi"] B {
+				  width: 40%;
+				  margin: 0 10%;
+				}
+
+				.GaugeMeter S, .GaugeMeter U {
+				  text-decoration: None;
+				  font-size: 1.5em;
+				  font-weight: 200;
+				  opacity: .6;
+				}
+
+		.GaugeMeter B {
+		  color: #1111;
+		 
+		  font-weight: 400;
+		  opacity: 1;
+		}
