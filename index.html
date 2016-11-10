@@ -2,20 +2,16 @@
 <html lang="en">
 	<head>
 		<title>MY V Bike rental</title>
-			<meta charset="utf-8" />
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<meta name="Bike rental" content="Presentation website">
-			 <!-- css -->
-			<link rel="stylesheet" type="text/css" href="index.css">
-			<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Bike rental" content="Presentation website">
+		<!-- css -->
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 			
-			<!--<iframe src="http://free.timeanddate.com/clock/i5fpvar2/n1446/tct/pct/ftb/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="90" height="34" allowTransparency="true"></iframe>-->
-			<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">	
-			
-			<style>
-				
-			</style>
+		<!--<iframe src="http://free.timeanddate.com/clock/i5fpvar2/n1446/tct/pct/ftb/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="90" height="34" allowTransparency="true"></iframe>-->
+		<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">	
 	</head>
 
 
@@ -35,14 +31,19 @@
 				<li id="leftMenuItem"><a href="price.html" id="price"><strong>Price list</strong></a></li>
 				<li id="leftMenuItem"><a href="reservation.html" id="reservation"><strong>Book a bike</strong></a></li>
 				<li id="leftMenuItem"><a href="contacts.php" id="contacts"><strong>Contact</strong></a></li>
-			
-				<li class="icon" >
-					<a href="javascript:void(0);" onclick="myFunction()">
-						<img src="imForSite/glyphicons-114-justify.png" alt="glyphicon menu">
-					</a>
-				</li>
 			</ul>
-
+			
+			<ul id="mySidenav" class="sidenav">
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a href="index.html" id="home">Home</a>
+			  <a href="price.html" id="price">Pricing</a>
+			  <a href="reservation.html" id="reservation">Reservation</a>
+			  <a href="contacts.php" id="contacts">Contact</a>
+			</ul>
+			
+			<a class="toggle" href="javascript:void(0);" onclick="openNav()">
+				<img src="imForSite/glyphicons-114-justify.png" alt="glyphicon menu">
+			</a>
 	</header>		
 			
 			
@@ -220,8 +221,35 @@
 				</div>
 			</footer>
 			
-			<!-- script -->
-		<script>
+			<!-- 
+			
+			<script>
+					
+					$(document).ready(function(){
+					$("#nav-mobile").html($("#nav-main").html());
+					$("#nav-trigger span").click(function(){
+						if ($("nav#nav-mobile ul").hasClass("expanded")) {
+							$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+							$(this).removeClass("open");
+						} else {
+							$("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+							$(this).addClass("open");
+						}
+					});
+				});
+			</script>-->
+
+			<script>
+				function openNav() {
+					document.getElementById("mySidenav").style.width = "250px";
+				}
+
+				function closeNav() {
+					document.getElementById("mySidenav").style.width = "0";
+				}
+			</script>
+		<!--<script>
+		
 		function myFunction() {
 			var x = document.getElementById("myTopnav");
 			if (x.className === "topnav") {
@@ -230,10 +258,7 @@
 				x.className = "topnav";
 			}
 		}
-		</script>
-		
-		
-
+		</script>-->
 		
 		<!-------------------google maps scrypt----------------->
 		<script>
@@ -252,16 +277,11 @@
 			}
 		</script>
 		
-		
-					
-		<script type="text/javascript" src="http://qoo.by/counter.js"></script>	
 		<script type='text/javascript' src='animation.js'></script>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
-		
 		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 		<script src="jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script> 
 				

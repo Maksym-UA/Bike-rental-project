@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	
+	
 	$('#selectAll').addClass('active');
 	var amountScrolled = 380;
 	
