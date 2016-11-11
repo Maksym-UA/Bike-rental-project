@@ -12,15 +12,23 @@ body {margin:0;}
 	src: url('data/Kelvinized.ttf') format('truetype');
 }
 
-header{
-	display: inline;
-	padding: 0px;
+header{	padding: 0px;}
+
+
+#sketch_grid { 
+	position:absolute;
+	height: 150px;
+	margin-right:0px;
+	z-index:0;
 }
+	
+
 
 .companyName{
 	font-family: 'Kelvinized', Turnpike, Hardman, Verdana; 
 	text-align: center;
 	font-size: 2.8em;	
+	z-index:1;
 }
 
 .logoName{
@@ -28,17 +36,20 @@ header{
 	justify-content: center;
 	align-items: center;
 	margin-top: 10px;
-	padding-left: 0px;
+	padding: 15px 0px 0px 0px;
+	z-index:1;
 }
 
 .logoName img {
 	display: inline-block;
 	width: 11%;
 	margin-right: 20px;
+	z-index:1;
 }
 
 .topnav {
 	display: flex;
+	
 	z-index:3;
 	list-style-type: none;
 	margin: 0;
@@ -50,6 +61,7 @@ header{
 }
 
 ul.topnav li a {
+	
 	position: relative;
   display: inline-block;
   color: black;
@@ -94,7 +106,7 @@ ul.topnav li a:link {
 
 #myTopnav .active{
 	border-bottom: 4px solid #009933;
-	z-index:5;
+	z-index:3;
 }
 
 ul.topnav li.icon {display: none;}
@@ -102,6 +114,7 @@ ul.topnav li.icon {display: none;}
 header #myTopnav li.icon img{
 	margin: 0;
 	width:25px;
+	z-index:1;
 }
 
 /*-------------------side navigation------------------------------*/
@@ -125,7 +138,7 @@ header #myTopnav li.icon img{
 	padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 20px;
-    color: #818181;
+    color: #e6e6e6;
     display: block;
     transition: 0.5s
 }
@@ -157,10 +170,17 @@ header #myTopnav li.icon img{
 	
   ul.topnav li{display: none;}
   .toggle {
-    float: right;
+	float: right;
     display: inline-block;
 	padding: 0px 5px 15px 0px;	
+	z-index:3;
   }
+  
+  #sketch_grid { 
+	z-index:-1;
+}
+  
+  
 }
 
 @media screen and (max-width:680px) {

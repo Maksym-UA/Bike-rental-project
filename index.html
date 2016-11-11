@@ -12,6 +12,15 @@
 			
 		<!--<iframe src="http://free.timeanddate.com/clock/i5fpvar2/n1446/tct/pct/ftb/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="90" height="34" allowTransparency="true"></iframe>-->
 		<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">	
+		
+		<!--[if lt IE 9]>
+			<script type="text/javascript">alert("Your browser does not support the canvas tag.");</script>
+			<![endif]-->
+			<script src="processing.js" type="text/javascript"></script>
+			<script type="text/javascript">
+			// convenience function to get the id attribute of generated sketch html element
+			function getProcessingSketchId () { return 'sketch_grid'; }
+			</script>
 	</head>
 
 
@@ -19,6 +28,13 @@
 	<body>
 	<header>
 	
+	
+	<div id="content">
+			<canvas id="sketch_grid" data-processing-sources="Sketch_for_Site.pde">	</canvas>
+	
+	</div>
+	
+		
 		<ul class="logoName"id="Name">
 			<img src="imForSite/motorbike.gif">
 			<h1 class="companyName">MY V Bike Rental</h1>
@@ -44,6 +60,8 @@
 			<a class="toggle" href="javascript:void(0);" onclick="openNav()">
 				<img src="imForSite/glyphicons-114-justify.png" alt="glyphicon menu">
 			</a>
+			
+			
 	</header>		
 			
 			
