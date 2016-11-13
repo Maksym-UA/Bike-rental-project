@@ -176,11 +176,8 @@ header #myTopnav li.icon img{
 	z-index:3;
   }
   
-  #sketch_grid { 
-	z-index:-1;
-}
-  
-  
+  #sketch_grid { z-index:-1;}
+ 
 }
 
 @media screen and (max-width:680px) {
@@ -192,7 +189,8 @@ header #myTopnav li.icon img{
 	.about{
 		display: flex;
 		justify-content: center;
-		align-items: top;}	
+		align-items: top;
+		}	
 	
 	#animItem:nth-child(2) {	display:none;}
 }
@@ -240,9 +238,6 @@ header #myTopnav li.icon img{
 /*--------------------------------main section-------------------------------*/
 
 
-.main{
-	
-}
 
 .main .col-sm-2{	display: block;}
 
@@ -275,7 +270,6 @@ a.goUpButton{
 	z-index: 3;
 	background: rgba(128, 128, 128, 0.6);
 	box-shadow: 0 3px 4px 0px rgba(0,0,0,0.5), 0 3px 4px 0px rgba(0,0,0,0.5);
-	
 }
 
 a:hover.goUpButton {
@@ -310,8 +304,6 @@ a:hover.goUpButton {
 
 .GaugeMeter{margin-right: 0px;}
 
-
-
 .orderBtn{
 	display: block;
 	padding: 0px 0px 25px 0px;
@@ -322,8 +314,7 @@ a:hover.goUpButton {
 	margin: auto;
 	background-color: #4CAF50; /* Green */
     border: none;
-	
-    color: white;
+	color: white;
     padding: 10px 25px;
     font-size: 18px;
 	display: flex;    
@@ -428,26 +419,24 @@ footer #map{z-index:5;}
 
 /*----------------gaugemeter----------------------*/
 .GaugeMeter {
-					
-				  position: Relative;
-				  text-align: Center;
-				  overflow: Hidden;
-				  cursor: Default;
-				  display: block;
-				 
-				}
+		
+	position: Relative;
+	text-align: Center;
+	overflow: Hidden;
+	cursor: Default;
+	display: block;
+	}
 
-				.GaugeMeter::after {
-				  content: "";
-				  display: block;
-				  width: 90px;
-				  height: 2px;
-				  background: rgba(0,0,0,0.1);
-				  border-radius: 50%;
-				  box-shadow: 0 0 3px 4px rgba(0,0,0,0.1);
-				  margin: 5px auto;
-				  
-				}
+	.GaugeMeter::after {
+	content: "";			  
+	display: block;
+	width: 90px;
+	height: 2px;			  
+	background: rgba(0,0,0,0.1);			  
+	border-radius: 50%;			  
+	box-shadow: 0 0 3px 4px rgba(0,0,0,0.1);			 
+	margin: 5px auto;					  	  
+	}
 				/*You can't manipulate :after, because it's not technically part of 
 				the DOM and therefore is inaccessible by any JavaScript. But you can 
 				add a new class with a new :after specified.*/

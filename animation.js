@@ -22,10 +22,10 @@ $(document).ready(function(){
 	return false;
 	});
 	
-	
+	var width = $(window).width();//current
 	
 	$(".GaugeMeter").each(function(){
-		var width = $(window).width();//current
+		
 		console.log(width);
 		var x = document.getElementsByClassName(".animCircles");
 		console.log(x);
@@ -33,7 +33,8 @@ $(document).ready(function(){
 		if(width <768){
 			$(".GaugeMeter").attr("data-size", 80);
 			$(".GaugeMeter").attr("data-width", 8);
-			$(".GaugeMeter").toggleClass('changed');			
+			$(".GaugeMeter").toggleClass('changed');
+			
 		}
 	});
 	

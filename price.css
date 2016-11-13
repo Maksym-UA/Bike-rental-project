@@ -1,0 +1,479 @@
+body {margin:0;}
+
+* {box-sizing: border-box;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+@font-face {
+	font-family: 'Kelvinized';
+	src: url('data/Kelvinized.ttf') format('truetype');
+}
+
+header{	padding: 0px;}
+
+
+#sketch_grid { 
+	position:absolute;
+	height: 150px;
+	margin-right:0px;
+	z-index:0;
+	width:99%
+}
+	
+/*
+
+.companyName{
+	font-family: 'Kelvinized', Turnpike, Hardman, Verdana; 
+	text-align: center;
+	font-size: 2.8em;	
+	z-index:1;
+}*/
+
+.logoName{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 0px 0px 0px;
+	z-index:1;
+}
+
+.logoName img {
+	display: block;
+	width: 60%;
+	margin: auto;
+	z-index:1;
+}
+
+.topnav {
+	display: flex;
+	
+	z-index:3;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: white;
+	justify-content: center;
+    align-items: center;	
+}
+
+ul.topnav li a {
+	
+	position: relative;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  border-bottom: 4px solid rgba(192, 192, 192, 0);
+	-webkit-transition: border 500ms ease;
+  -moz-transition: border 500ms ease;
+  -ms-transition: border 500ms ease;
+  -o-transition: border 500ms ease;
+  transition: border 500ms ease;
+ }
+
+ul.topnav li a:link {
+	color:black;
+} 
+
+.leftMenuItem:nth-child(1) a:not(.active):hover{
+	border-bottom: 4px solid rgba(102, 0, 34, 1);
+}
+
+.leftMenuItem:nth-child(2) a:not(.active):hover{
+	border-bottom: 4px solid rgba(255, 0, 0, 1);
+}
+
+.leftMenuItem:nth-child(3) a:hover{
+	border-bottom: 4px solid rgba(0, 122, 204, 1);
+}
+
+.leftMenuItem:nth-child(4) a:hover{
+	border-bottom: 4px solid rgba(230, 184, 0, 1);
+}
+
+
+/*ul.topnav li:not(:last-child) a:hover, ul.topnav li:not(:last-child)  {
+	z-index:3;
+	color: black;
+
+}*/
+
+#myTopnav .active{
+	border-bottom: 4px solid rgba(255, 0, 0, 1);
+	z-index:3;
+}
+
+ul.topnav li.icon {display: none;}
+
+header #myTopnav li.icon img{
+	margin: 0;
+	width:25px;
+	z-index:1;
+}
+
+/*-------------------side navigation------------------------------*/
+.toggle{display: none;}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+	padding-left: 0px;
+}
+
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #e6e6e6;
+    display: block;
+    transition: 0.5s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: white;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/*---------------------------------media query--------------------*/
+
+@media screen and (max-width:680px) {
+	ul.topnav{width:100%;
+	display:block;
+	height: auto;}
+	
+  ul.topnav li{display: none;}
+  .toggle {
+	float: right;
+    display: inline-block;
+	padding: 0px 5px 15px 0px;	
+	z-index:3;
+  }
+  
+  #sketch_grid { z-index:-1; display: none;}
+ 
+}
+
+@media screen and (max-width:680px) {
+	
+	.companyName{
+	font-size: 1.2em;
+	}
+	
+	.about{
+		display: flex;
+		justify-content: center;
+		align-items: top;
+	}	
+	
+}
+
+
+
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+
+
+/*--------------------------------main section-------------------------------*/
+
+.main{
+	
+}
+
+.main .col-sm-2{	display: block;}
+
+.main .goUpButton :nth-child(1){
+	padding-top:10%;
+	margin-bottom: -12px;
+}
+ 
+ 
+a.goUpButton{
+	display: none;
+	width:40px;
+	height: 40px;
+	color: black;
+	position:fixed;
+	margin:auto;
+	right: 5%;
+	bottom: 15%;
+	z-index: 3;
+	background: rgba(128, 128, 128, 0.6);
+	box-shadow: 0 3px 4px 0px rgba(0,0,0,0.5), 0 3px 4px 0px rgba(0,0,0,0.5);
+}
+
+a:hover.goUpButton {
+	background:#009933;
+	color: white;
+}
+
+.main .col-sm-8{
+	background:#ffffff;
+	padding:45px 35px 10px 35px;
+	box-shadow:0 6px 20px 0 rgba(0,0,0,0.25);
+	text-align: left;
+}
+
+/*To not see any shadow on the sides, the (absolute value of the) spread radius (4th parameter) needs to be the same as the blur radius (3rd parameter).*/
+
+.col-sm-12.row{
+	margin:0px;
+	padding: 15px 0px 25px 0px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-sm-6.bikePic{
+	padding:0px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bikes{
+	
+	padding: 0px; 
+	width:60%;
+}
+
+#Menu{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	margin: auto;
+	width: 40%;
+	padding-left: 0px;
+	padding-bottom: 15px;
+
+}
+
+#Menu li{
+	display:block;
+	padding: 0px 10px 0px 10px;
+	
+	/*-webkit-transition: width 2s; /* Safari */
+    /*transition: height 2s;*/
+    /*transition-delay: 1s;*/
+}
+
+/*#leftMenu li:hover{
+	height: 200px;
+	 background: #00cc88;
+}*/
+
+
+#Menu li:nth-child(2){
+	border-right: 2px solid #BCBCBC;
+	border-left: 2px solid #BCBCBC;
+}
+
+#Menu li:nth-child(4){
+	border-left: 2px solid #BCBCBC;
+}
+
+
+.MenuItem a{
+	color: #424242;
+	font-size: 1.3em;
+	text-decoration: none;
+	border-bottom: 2px solid rgba(192, 192, 192, 0);
+	-webkit-transition: border 500ms ease;
+  -moz-transition: border 500ms ease;
+  -ms-transition: border 500ms ease;
+  -o-transition: border 500ms ease;
+  transition: border 500ms ease;
+}
+
+.MenuItem .active{
+	color: #FF9900;
+	text-decoration: none;
+}
+
+.MenuItem .active:hover{	border-bottom: 2px solid #FF9900;}
+
+
+
+.MenuItem a:hover{
+	text-decoration: none;
+	border-bottom: 2px solid rgba(50,153,187, 1);
+}
+
+
+
+
+
+.orderBtn{
+	display: block;
+	padding: 0px 0px 25px 0px;
+}
+
+.ourOfferBtn{
+	display: block;
+	margin: auto;
+	background-color: #4CAF50; /* Green */
+    border: none;
+	color: white;
+    padding: 10px 25px;
+    font-size: 18px;
+	display: flex;    
+}
+
+.ourOffer{
+	text-decoration: none;
+    color: white;
+}
+
+.ourOfferBtn:hover{	background-color:#009933;}
+
+.ourOfferBtn a:hover{color:white; text-decoration:none;}
+
+
+
+/*-----------------------footer--------------------*/
+
+footer {
+  font-size: 12px;
+  width:100%;
+  color: black;
+  background-color: #e6e6e6;
+  margin-top:15px;
+}
+
+#foot{padding: 0px 0px 0px 0px;}
+
+#siteMap, #brands, #contactInfo, {padding: 0px; margin: 0px;}
+
+#siteMap h5, #brands h5, #contactInfo h5 {padding: 0px; margin: 0px;}
+
+#siteMap a, #brands a{
+	text-decoration: none;
+	color: black;
+	border-bottom: 4px solid rgba(192, 192, 192, 0);
+	-webkit-transition: border 500ms ease;
+  -moz-transition: border 500ms ease;
+  -ms-transition: border 500ms ease;
+  -o-transition: border 500ms ease;
+  transition: border 500ms ease;
+}
+
+#siteMap a:link, #brands a:link {
+	color:black;
+} 
+
+#Honda:hover{border-bottom: 4px solid rgba(231, 24, 55, 1.0);}
+
+#Kawasaki:hover{border-bottom: 4px solid rgba(84, 220, 48, 1.0);}
+
+#Suzuki:hover{border-bottom: 4px solid rgba(0, 11, 16, 1.0);}
+
+#Yamaha:hover{border-bottom: 4px solid rgba(255, 51, 51, 1.0);}
+
+
+#socialRow{
+	position: relative;
+	display: inline-block;
+	width:100%;
+	background-color: #808080;
+}
+
+.socialMedia{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	list-style-type: none;
+	margin: 0px;
+	padding: 10px;
+}
+
+.socialMedia li {
+	padding: 8px 15px;
+	margin:2px;
+}
+
+#facebook{background-color: #3b5998;}
+
+#google{background-color:  #d34836;}
+
+#linkedin{background-color: #0077B5;}
+
+#skype{background-color: #12a5f4;}
+
+#whatsapp{background-color:  #34af23;}
+
+#twitter{background-color: #0084b4;}
+
+
+footer li  img{width: 24px;}
+
+footer #map{z-index:5;}
+
+#rights{
+	position: relative;
+	display: inline-block;
+	width:100%;   
+	color: white;
+	background-color: #333333;
+	padding: 0px ;
+	text-align: center;
+}

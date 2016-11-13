@@ -6,56 +6,142 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<meta name="Bike rental" content="Presentation website">
 			 <!-- css -->
-			<link rel="stylesheet" type="text/css" href="index.css">
+			<link rel="stylesheet" type="text/css" href="price.css">
 			<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 			
-			
+			<!--<iframe src="http://free.timeanddate.com/clock/i5fpvar2/n1446/tct/pct/ftb/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="90" height="34" allowTransparency="true"></iframe>-->
+			<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">	
+		
+			<!--[if lt IE 9]>
+			<script type="text/javascript">alert("Your browser does not support the canvas tag.");</script>
+			<![endif]-->
+			<script src="processing.js" type="text/javascript"></script>
+			<script type="text/javascript">
+			// convenience function to get the id attribute of generated sketch html element
+			function getProcessingSketchId () { return 'sketch_grid'; }
+			</script>
 	</head>
 
 
-
 	<body>
-	<header>
+		<header>
 		
-				
-		<a name="top"></a> 
-			
-			<ul class="topnav" id="myTopnav">
-				<li><a href="index.html">Home</a></li>
-				<li><a class="active" href="price.html">Price list</a></li>
-				<li><a href="reservation.html">Book a bike</a></li>
-				<li><a href="contacts.php">Contact</a></li>
-			
-				<li class="icon">
-					<a href="javascript:void(0);" onclick="myFunction()">
-						<img src="imForSite/glyphicons-114-justify.png" alt="glyphicon menu">
-					</a>
-				</li>
+			<div id="content">
+				<canvas id="sketch_grid" data-processing-sources="Sketch_for_Site.pde">	</canvas>
+			</div>
+		
+			<ul class="logoName" id="Name">
+				<img src="imForSite/logo2.png" alt="MY V Bike Rental logo">
 			</ul>
-
-	</header>		
 			
+			<a name id="top"></a> 
+				
+				<ul class="topnav" id="myTopnav">
+					<li class="leftMenuItem"><a href="index.html" id="home"><strong>Home</strong></a></li>
+					<li class="leftMenuItem"><a class="active" href="price.html"><strong>Prices</strong></a></li>
+					<li class="leftMenuItem"><a href="reservation.html" id="reservation"><strong>Rent</strong></a></li>
+					<li class="leftMenuItem"><a href="contacts.php" id="contacts"><strong>Contact</strong></a></li>
+				</ul>
+				
+				<div id="mySidenav" class="sidenav">
+				  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				  <a href="index.html" id="home">Home</a>
+				  <a href="price.html" id="price">Prices</a>
+				  <a href="reservation.html" id="reservation">Rent</a>
+				  <a href="contacts.php" id="contacts">Contact</a>
+				</div>
+				
+				<a class="toggle" href="javascript:void(0);" onclick="openNav()">
+					<img src="imForSite/glyphicons-114-justify.png" alt="glyphicon menu">
+				</a>
+
+		</header>	
+
+		
 		<section class="main">
+		
+
 			
 			<div class="container-fluid text-center">
 				<div class="col-sm-2">
 					<a href="#top" class="goUpButton">	
-						
-								<p><span class="glyphicon glyphicon-menu-up"></span> </p>
-								<p><span class="glyphicon glyphicon-menu-up"></span> </p>
-						
+						<p><span class="glyphicon glyphicon-menu-up"></span> </p>
+						<p><span class="glyphicon glyphicon-menu-up"></span> </p>
 					</a>	
 				</div>
 				
 				
-				<div class="col-sm-8 text-left">
+				<div class="col-sm-8">
+				
+				<div class="row" id="bikeSelection">
+						<ul id="Menu">
+							<li class="MenuItem"><a href="#" id="selectAll">All</a></li>
+							<li class="MenuItem"><a href="#" id="sportSel">Sport</a></li>
+							<li class="MenuItem"><a href="#" id="tourSel">Tourist</a></li>
+							<li class="MenuItem"><a href="#" id="cruiserSel">Cruiser</a></li>
+						</ul>
+				</div>
 						
 						
-
+					<div class="col-sm-12 row" id="sport">
+						<div class="col-sm-6 bikePic" >
+							<img class="bikes" src="imForSite/motorbike.png" alt="motorbike">
+						</div>
 						
 						
+						<div class="col-sm-6 text">
+							<h4>Brand/model sport</h4>
+							<h5>Type:</h5>
+							<h5>Style: </h5>
+							<h5>Torque:</h5>
+							<h5 style="display:inline;">Max </h5><img src="imForSite/speedometer.png" style="width:18px; display:inline;" alt="spedometer icon"><h4 style="display:inline;">:</h4>
+							<h5>Power:</h5>
+							<h5>Fuel:</h5>
 						
+						</div>
+					
+					</div>
+					
+					
+					<div class="col-sm-12 row" id="tourist">
+						<div class="col-sm-6 bikePic">
+							<img class="bikes" src="imForSite/motorbike.png" alt="motorbike">
+						</div>
+						
+						
+						<div class="col-sm-6 text">
+							<h4>Brand/model tour</h4>
+							<h5>Type:</h5>
+							<h5>Style: </h5>
+							<h5>Torque:</h5>
+							<h5 style="display:inline;">Max </h5><img src="imForSite/speedometer.png" style="width:18px; display:inline;" alt="spedometer icon"><h4 style="display:inline;">:</h4>
+							<h5>Power:</h5>
+							<h5>Fuel:</h5>
+						
+						</div>
+					
+					</div>
+						
+						
+					<div class="col-sm-12 row" id="cruiser">
+						<div class="col-sm-6 bikePic">
+							<img class="bikes" src="imForSite/motorbike.png" alt="motorbike">
+						</div>
+						
+						
+						<div class="col-sm-6 text">
+							<h4>Brand/model cruiser</h4>
+							<h5>Type:</h5>
+							<h5>Style: </h5>
+							<h5>Torque:</h5>
+							<h5 style="display:inline;">Max </h5><img src="imForSite/speedometer.png" style="width:18px; display:inline;" alt="spedometer icon"><h4 style="display:inline;">:</h4>
+							<h5>Power:</h5>
+							<h5>Fuel:</h5>
+						
+						</div>
+					
+					</div>
 
 						
 						
@@ -68,29 +154,87 @@
 		</section>	
 		
 		
-			<footer class="container-fluid">
-				<div class="row">
-					
+			<footer class="container-fluid" id="foot">
+			
+			<div class="col-sm-2">
+			</div>
+			<div class="col-sm-8 about" >
+				<div class="col-sm-4" id ="siteMap">
+					<h4><strong>Site map</strong></h4>
+					<h5><a href="index.html">Home</a></h5><br>
+					<h5><a href="price.html">Price list</a></h5><br>
+					<h5><a href="reservation.html">Book a bike</a></h5><br>
+					<h5><a href="contacts.php">Contact</a></h5>
+				</div>
+				<div class="col-sm-4 " id ="brands">
+					<h4><strong>Partners</strong></h4>
+					<h5><a id="Honda" href="http://powersports.honda.com/" target="_blank">Honda</a></h5><br>
+					<h5><a id="Kawasaki" href="https://www.kawasaki.com/" target="_blank">Kawasaki</a></h5><br>
+					<h5><a id="Suzuki" href="http://www.suzuki-moto.com/" target="_blank">Suzuki</a></h5><br>
+					<h5><a id="Yamaha" href="https://www.yamahamotorsports.com/motorcycle" target="_blank">Yamaha</a></h5>
+				</div>
+				
+				<div class="col-sm-4" id="contactInfo">
+					<h4><strong>MY V Bike Rental</strong></h4>
+					<h5><strong>Address:</strong> 20-250, I.Daszynskiego, 3a, <br>Lublin, Poland</h5><br>
+					<h5><strong>Business Hours:</strong> 10a-7p Mon-Sat, 12p-6p Sun </h5><br>
+					<h5><strong>E-mail:</strong> myvbikes@gmail.com</h5><br>
+					<h5><strong>Tel:</strong> +12345678</h5>
+									
+					<!-- <div id="map" style="width:350px;height:300px;">MY V Bike</div>-->
+				</div>
+			</div>
+			<div class="col-sm-2">
+			</div>
+				<div id="socialRow">
+					<ul class="socialMedia">
+						<li id="facebook"><a href="url">
+								<img src="imForSite/facebook.png" alt="facebook logo">
+							</a>
+						</li>
+						<li id="google"><a href="url">
+								<img src="imForSite/google-logo.png" alt="google logo">
+							</a>
+						</li>
+						<li id="linkedin"><a href="url">
+								<img src="imForSite/linkedin-logo.png" alt="linkedin logo">
+							</a>
+						</li>
+						<li id="skype"><a href="url">
+								<img src="imForSite/skype-logo.png" alt="skype logo">
+							</a>
+						</li>
+						<li id="whatsapp"><a href="url">
+								<img src="imForSite/whatsapp-logo.png" alt="whatsapp logo">
+							</a>
+						</li>
+						<li id ="twitter"><a href="url">
+								<img src="imForSite/twitter-logo.png" alt="twitter logo">
+							</a>
+						</li>
 						
+					</ul>
+				</div>	
+				<div id ="rights">
+				<h5>MY V Bike Rental &copy; 2016</h5>
 				</div>
 			</footer>
 			
 			<!-- script -->
-		<script type="text/javascript" src="http://qoo.by/counter.js"></script>	
-		<script type='text/javascript' src='animation.js'></script>
+			<script>
+				function openNav() {
+					document.getElementById("mySidenav").style.width = "250px";
+				}
+
+				function closeNav() {
+					document.getElementById("mySidenav").style.width = "0";
+				}
+			</script>
+			
+			<script type='text/javascript' src='animation.js'></script>
+			
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-		<script>
-		function myFunction() {
-			var x = document.getElementById("myTopnav");
-			if (x.className === "topnav") {
-				x.className += " responsive";
-			} else {
-				x.className = "topnav";
-			}
-		}
-		</script>
-
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 	</body>
 </html>
