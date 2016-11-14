@@ -1,26 +1,26 @@
-
+MovingBall centre;
 MovingBall[] arounds;
 
 int numOfBalls;
    
 
 void setup() {
-  size(1600, 150);
+  size(1600,350);
 
   numOfBalls = 200;
-
+ centre = new MovingBall(width/2, height/2);
   arounds = new MovingBall[numOfBalls];
  
   for (int i=0; i < arounds.length; i++ ) {
     arounds[i] = new MovingBall(random(width), random(height) );
   }
-   background(0);
+    background(255);
  }
 
 
 void draw() {
-  background(255);
-   
+  //background(0);
+    //centre.run();
    for (int i=0; i < arounds.length; i++ ) {
      arounds[i].run();
    }
@@ -40,7 +40,7 @@ class MovingBall {
   float tx, ty;      // target in x and y
   float step, inc;
   float radius;
- int numOfDirections =2;// from 1 -9
+ int numOfDirections =1;// from 1 -9
   int direction;
 
 
@@ -106,8 +106,12 @@ class MovingBall {
   //
   //
   void display() {
+   
     noStroke();
-    fill(20, 60);
+     //rectMode(CENTER);
+   // fill(255, 30);
+    //rect(tx, ty, 5, 5);
+    fill(220, 60);
     ellipse(x, y, 2, 2);
    
   }

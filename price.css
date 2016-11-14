@@ -12,15 +12,16 @@ body {margin:0;}
 	src: url('data/Kelvinized.ttf') format('truetype');
 }
 
-header{	padding: 0px;}
+header{	padding: 0px;
+	}
 
 
 #sketch_grid { 
 	position:absolute;
 	height: 150px;
+	width:99%;
 	margin-right:0px;
 	z-index:0;
-	width:99%
 }
 	
 /*
@@ -55,7 +56,7 @@ header{	padding: 0px;}
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: white;
+	border-bottom: 2px solid rgba(233,233,233,1);
 	justify-content: center;
     align-items: center;	
 }
@@ -144,7 +145,7 @@ header #myTopnav li.icon img{
 }
 
 .sidenav a:hover, .offcanvas a:focus{
-    color: white;
+    color: #FF9900;
 }
 
 .sidenav .closebtn {
@@ -172,25 +173,53 @@ header #myTopnav li.icon img{
   .toggle {
 	float: right;
     display: inline-block;
-	padding: 0px 5px 15px 0px;	
+	padding: 15px 15px 0px 0px;	
 	z-index:3;
   }
   
   #sketch_grid { z-index:-1; display: none;}
+  
+  
+  
+  .logoName img {	width: 90%;}
+  
+  footer #siteMap, footer #brands{
+		display: none;
+	}
+	
+	footer #contactInfo{
+		position: relative;
+		display: block;
+		
+	}	
+	
+	#socialRow li{
+		padding: 8px 8px;
+		margin:2px;
+	}
+	#animItem:nth-child(2) {	display:none;}
+	
+	.main .container-fluid .col-sm-8{
+	
+		padding:10px 35px;
+	}
+	.main .container-fluid #socialRowSide{display: none;}
  
 }
 
-@media screen and (max-width:680px) {
+@media screen and (min-width: 480px) {
 	
-	.companyName{
-	font-size: 1.2em;
+	.main .container-fluid .col-sm-2{display:inline-block;}
+	.col-sm-8 .about{
+		display: inline-block;
 	}
-	
-	.about{
-		display: flex;
-		justify-content: center;
-		align-items: top;
-	}	
+		
+	.logoName img {	width: 90%;}
+		
+	#socialMedia li {
+		padding: 8px 15px;
+		margin:2px;
+	}		
 	
 }
 
@@ -237,6 +266,11 @@ header #myTopnav li.icon img{
 /*--------------------------------main section-------------------------------*/
 
 .main{
+	background: #ffffff; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient( #f2f2f2, #ffffff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient( #f2f2f2, #ffffff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient( #f2f2f2, #ffffff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient( #f2f2f2, #ffffff); /* Standard syntax (must be last) */
 	
 }
 
@@ -267,6 +301,55 @@ a:hover.goUpButton {
 	color: white;
 }
 
+
+#socialRowSide{
+	position: fixed;
+	top: 202px;
+	left: 0px;
+	display: block;
+	
+	
+}
+
+#socialMediaSide{
+	display: block;
+    list-style-type: none;
+	margin: 0px;
+	padding: 10px 10px 10px 0px;
+	
+}
+
+#socialMediaSide  li{
+	width:60px;
+	padding: 15px;
+	-webkit-transition: width 2s; /* Safari */
+    transition: width 2s;
+	opacity:0.8;
+}
+
+#socialMediaSide  li:hover {width: 100px;}
+
+#facebookSide{background-color: #3b5998;  }
+
+#googleSide{background-color:  #d34836;}
+
+#linkedinSide{background-color: #0077B5;}
+
+#skypeSide{background-color: #12a5f4;}
+
+#whatsappSide{background-color:  #34af23;}
+
+#twitterSide{background-color: #0084b4;}
+
+
+#socialRowSide li  img{width: 28px;}
+
+
+
+
+
+
+
 .main .col-sm-8{
 	background:#ffffff;
 	padding:45px 35px 10px 35px;
@@ -276,26 +359,7 @@ a:hover.goUpButton {
 
 /*To not see any shadow on the sides, the (absolute value of the) spread radius (4th parameter) needs to be the same as the blur radius (3rd parameter).*/
 
-.col-sm-12.row{
-	margin:0px;
-	padding: 15px 0px 25px 0px;
-	display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.col-sm-6.bikePic{
-	padding:0px;
-	display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bikes{
-	
-	padding: 0px; 
-	width:60%;
-}
 
 #Menu{
 	display: flex;
@@ -360,23 +424,137 @@ a:hover.goUpButton {
 }
 
 
+.row{
+	margin:0px;
+	 padding: 5px;
+}
+
+#sport, #tourist, #cruiser{
+	margin-bottom: 25px;
+	padding: 10px;
+	 -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	
+	}
+
+.col-sm-6.bikePic{
+	position: relative;
+	display: inline;
+    padding: 30px;
+	text-align:center;
+}
+
+.bikes{
+	position: relative;
+	padding: 5px; 
+	width:80%;
+	
+}
+
+
+.col-sm-6.data{
+	position: relative;
+	display: inline;
+    vertical-align:middle;
+	text-align:center;
+	padding: 0px ;
+	
+ }
+
+
+
+
+table{
+	position: relative;
+	color: #333;
+	font-family: Helvetica, Arial, sans-serif;
+	width: 100%;
+	border-collapse: collapse;
+	
+	
+	
+}
+
+
+
+table td, table th {
+  border: 2px solid #E9E9E9;
+}
+table tr:first-child th {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0;
+}
+
+
+
+
+
+ th {
+border: 1px solid transparent; /* No more visible border */
+height: 30px;
+transition: all 0.3s; /* Simple transition for hover effect */
+}
+
+th h4 {
+	padding-left: 5px;
+}
+
+th {
+background: rgba(50,153,187, 0.5);
+font-weight: bold;
+}
+
+td {
+	width: 20%;
+background: #FAFAFA;
+text-align: center;
+
+}
+
+
+
+.specs tr:nth-child(2) td , .pricing tr:nth-child(1) td{ background: #F1F1F1; }
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)
+.specs tr:nth-child(odd) td { background: #FEFEFE; }
+
+.pricing tr:nth-child(even) td { background: #FEFEFE; } */
+
+.specs tr:nth-child(2) td:hover, .pricing tr:nth-child(1) td:hover, tr td:hover { background: #666; color: #FFF; } /* Hover cell effect! */
+
+
+
 
 
 
 .orderBtn{
-	display: block;
-	padding: 0px 0px 25px 0px;
+	position: relative;
+	margin: 5px;
+	
+	
 }
 
 .ourOfferBtn{
-	display: block;
-	margin: auto;
-	background-color: #4CAF50; /* Green */
+	position: relative;
+	background-color: rgba( 255,153,0, 1);
     border: none;
 	color: white;
-    padding: 10px 25px;
-    font-size: 18px;
-	display: flex;    
+    font-size: 16px;
+	padding: 10px;
+	
+	
+	
 }
 
 .ourOffer{
@@ -384,7 +562,7 @@ a:hover.goUpButton {
     color: white;
 }
 
-.ourOfferBtn:hover{	background-color:#009933;}
+.ourOfferBtn:hover{	background-color:rgba( 255,153,0, 0.8);}
 
 .ourOfferBtn a:hover{color:white; text-decoration:none;}
 
@@ -396,15 +574,15 @@ footer {
   font-size: 12px;
   width:100%;
   color: black;
-  background-color: #e6e6e6;
+  background-color: #E9E9E9;
   margin-top:15px;
 }
 
 #foot{padding: 0px 0px 0px 0px;}
 
-#siteMap, #brands, #contactInfo, {padding: 0px; margin: 0px;}
+#siteMap, #brands, #contactInfo  {display: inline-block; padding: 0px; margin: 0px;}
 
-#siteMap h5, #brands h5, #contactInfo h5 {padding: 0px; margin: 0px;}
+#siteMap h5, #brands h5, #contactInfo h5 {padding: 0px; margin-top: 5px;margin-bottom: 5px;}
 
 #siteMap a, #brands a{
 	text-decoration: none;
@@ -434,10 +612,10 @@ footer {
 	position: relative;
 	display: inline-block;
 	width:100%;
-	background-color: #808080;
+	background-color: #BCBCBC;
 }
 
-.socialMedia{
+#socialMedia{
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -446,10 +624,7 @@ footer {
 	padding: 10px;
 }
 
-.socialMedia li {
-	padding: 8px 15px;
-	margin:2px;
-}
+
 
 #facebook{background-color: #3b5998;}
 
@@ -473,7 +648,7 @@ footer #map{z-index:5;}
 	display: inline-block;
 	width:100%;   
 	color: white;
-	background-color: #333333;
+	background-color: #424242;
 	padding: 0px ;
 	text-align: center;
 }
