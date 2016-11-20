@@ -1,4 +1,6 @@
-body {margin:0;}
+html{margin-bottom: -15px;}
+
+body {margin:0px; }
 
 * {box-sizing: border-box;}
 
@@ -16,46 +18,48 @@ header{	padding: 0px;}
 
 
 #sketch_grid { 
+	display:flex;
 	position:absolute;
 	height: 150px;
-	margin-right:0px;
+	width:99%;
+	padding: 0px;
+	
 	z-index:0;
 }
 	
-
+/*
 
 .companyName{
 	font-family: 'Kelvinized', Turnpike, Hardman, Verdana; 
 	text-align: center;
 	font-size: 2.8em;	
 	z-index:1;
-}
+}*/
 
 .logoName{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 10px;
 	padding: 15px 0px 0px 0px;
 	z-index:1;
 }
 
 .logoName img {
-	display: inline-block;
-	width: 11%;
-	margin-right: 20px;
+	display: block;
+	width: 800px;
+	margin: auto;
 	z-index:1;
 }
 
 .topnav {
 	display: flex;
 	
-	z-index:3;
+	
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: white;
+	
 	justify-content: center;
     align-items: center;	
 }
@@ -81,19 +85,19 @@ ul.topnav li a:link {
 	color:black;
 } 
 
-#leftMenuItem:nth-child(1) a:not(.active):hover{
+.leftMenuItem:nth-child(1) a:not(.active):hover{
 	border-bottom: 4px solid rgba(102, 0, 34, 1);
 }
 
-#leftMenuItem:nth-child(2) a:not(.active):hover{
+.leftMenuItem:nth-child(2) a:not(.active):hover{
 	border-bottom: 4px solid rgba(255, 0, 0, 1);
 }
 
-#leftMenuItem:nth-child(3) a:hover{
+.leftMenuItem:nth-child(3) a:hover{
 	border-bottom: 4px solid rgba(0, 122, 204, 1);
 }
 
-#leftMenuItem:nth-child(4) a:hover{
+.leftMenuItem:nth-child(4) a:hover{
 	border-bottom: 4px solid rgba(230, 184, 0, 1);
 }
 
@@ -144,7 +148,7 @@ header #myTopnav li.icon img{
 }
 
 .sidenav a:hover, .offcanvas a:focus{
-    color: white;
+    color: #FF9900;
 }
 
 .sidenav .closebtn {
@@ -163,7 +167,7 @@ header #myTopnav li.icon img{
 
 /*---------------------------------media query--------------------*/
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:780px) {
 	ul.topnav{width:100%;
 	display:block;
 	height: auto;}
@@ -172,31 +176,54 @@ header #myTopnav li.icon img{
   .toggle {
 	float: right;
     display: inline-block;
-	padding: 0px 5px 15px 0px;	
+	padding: 15px 15px 10px 0px;
 	z-index:3;
   }
   
-  #sketch_grid { z-index:-1;}
+  #sketch_grid { z-index:-1; display: none;}
+  
+  .logoName img {	width: 90%;}
+  
+  footer #siteMap, footer #brands{
+		display: none;
+	}
+	
+	footer #contactInfo{
+		position: relative;
+		display: block;
+		
+	}	
+	
+	#socialRow li{
+		padding: 8px 8px;
+		margin:2px;
+	}
+	#animItem:nth-child(2) {	display:none;}
+	
+	.main .container-fluid .col-sm-8{
+	
+		padding:10px 35px;
+	}
+	
  
 }
 
-@media screen and (max-width:680px) {
+@media screen and (min-width: 480px) {
 	
-	.companyName{
-	font-size: 1.2em;
+	.main .container-fluid .col-sm-2{display:inline-block;}
+	.col-sm-8 .about{
+		display: inline-block;
 	}
 	
-	.about{
-		display: flex;
-		justify-content: center;
-		align-items: top;
-		}	
 	
-	#animItem:nth-child(2) {	display:none;}
+		
+	#socialMedia li {
+		padding: 8px 15px;
+		margin:2px;
+	}
+	
 }
-
-
-
+	
 
 /* For mobile phones: */
 [class*="col-"] {
@@ -234,11 +261,17 @@ header #myTopnav li.icon img{
 }
 
 
-
 /*--------------------------------main section-------------------------------*/
 
 
-
+.main{
+	background: #ffffff; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient( #f2f2f2, #ffffff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient( #f2f2f2, #ffffff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient( #f2f2f2, #ffffff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient( #f2f2f2, #ffffff); /* Standard syntax (must be last) */
+	
+}
 .main .col-sm-2{	display: block;}
 
 .main .goUpButton :nth-child(1){
@@ -310,12 +343,16 @@ a:hover.goUpButton {
 }
 
 .ourOfferBtn{
+	
+	width: 120px; 
+	cursor: pointer;  
+	border: none;  
 	display: block;
 	margin: auto;
-	background-color: #4CAF50; /* Green */
+	background-color: rgba( 255,153,0, 1);
     border: none;
 	color: white;
-    padding: 10px 25px;
+    padding: 10px 25px 10px 25px;
     font-size: 18px;
 	display: flex;    
 }
@@ -325,7 +362,7 @@ a:hover.goUpButton {
     color: white;
 }
 
-.ourOfferBtn:hover{	background-color:#009933;}
+.ourOfferBtn:hover{	background-color:rgba( 255,153,0, 0.8);}
 
 .ourOfferBtn a:hover{color:white; text-decoration:none;}
 
@@ -343,7 +380,9 @@ footer {
 
 #foot{padding: 0px 0px 0px 0px;}
 
-#siteMap, #brands, #contactInfo{padding: 0px;}
+#siteMap, #brands, #contactInfo  {display: inline-block; padding: 0px; margin: 0px;}
+
+#siteMap h5, #brands h5, #contactInfo h5 {padding: 0px; margin-top: 5px;margin-bottom: 5px;}
 
 #siteMap a, #brands a{
 	text-decoration: none;
@@ -376,7 +415,7 @@ footer {
 	background-color: #808080;
 }
 
-.socialMedia{
+#socialMedia{
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -385,10 +424,7 @@ footer {
 	padding: 10px;
 }
 
-.socialMedia li {
-	padding: 8px 15px;
-	margin:2px;
-}
+
 
 #facebook{background-color: #3b5998;}
 

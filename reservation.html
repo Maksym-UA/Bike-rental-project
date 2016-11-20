@@ -1,96 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>MY V Bike rental</title>
+		<title>MY V Bike Rental</title>
 			<meta charset="utf-8" />
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<meta name="Bike rental" content="Presentation website">
-			 <!-- css -->
-			<link rel="stylesheet" type="text/css" href="index.css">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta name="Bike rental" content="Booking page">
+			<!-- css -->
+			<link rel="stylesheet" type="text/css" href="reservation.css">
 			<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-			
-			
+				
+			<!--<iframe src="http://free.timeanddate.com/clock/i5fpvar2/n1446/tct/pct/ftb/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="90" height="34" allowTransparency="true"></iframe>-->
+			<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">	
+		
+			<!--[if lt IE 9]>
+			<script type="text/javascript">alert("Your browser does not support the canvas tag.");</script>
+			<![endif]-->
+			<script src="processing.js" type="text/javascript"></script>
+			<script type="text/javascript">
+			// convenience function to get the id attribute of generated sketch html element
+			function getProcessingSketchId () { return 'sketch_grid'; }
+			</script>
 	</head>
 
 
 
 	<body>
-	<header>
+		<header>
+			
+			<div id="content">
+					<canvas id="sketch_grid" data-processing-sources="Sketch_for_Site.pde"></canvas>
+			</div>
 		
-				
-		<a name="top"></a> 
-			
-			<ul class="topnav" id="myTopnav">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="price.html">Price list</a></li>
-				<li><a class="active" href="reservation.html">Book a bike</a></li>
-				<li><a href="contacts.php">Contact</a></li>
-			
-				<li class="icon">
-					<a href="javascript:void(0);" onclick="myFunction()">
-						<img src="imForSite/glyphicons-114-justify.png" alt="glyphicon menu">
-					</a>
-				</li>
+			<ul class="logoName" id="Name">
+				<img src="imForSite/logo2.png" alt="MY V Bike Rental logo">
 			</ul>
-
-	</header>		
+			
+			<a name="top"></a> 
+				
+				<ul class="topnav" id="myTopnav">
+					<li class="leftMenuItem"><a  href="index.html" id="home"><strong>Home</strong></a></li>
+					<li class="leftMenuItem"><a  href="price.html" id="price"><strong>Prices</strong></a></li>
+					<li class="leftMenuItem"><a class="active" href="reservation.html" id="reservation"><strong>Rent</strong></a></li>
+					<li class="leftMenuItem"><a href="contact.html" id="contacts"><strong>Contact</strong></a></li>
+				</ul>
+				
+				<div id="mySidenav" class="sidenav">
+				  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				  <a href="index.html" id="home">Home</a>
+				  <a href="price.html" id="price">Prices</a>
+				  <a href="reservation.html" id="reservation">Rent</a>
+				  <a href="contact.html" id="contacts">Contact</a>
+				</div>
+				
+				<a class="toggle" href="javascript:void(0);" onclick="openNav()">
+					<img src="imForSite/glyphicons-114-justify.png" alt="glyphicon menu">
+				</a>
+				
+				
+		</header>
 			
 		<section class="main">
 			
 			<div class="container-fluid text-center">
 				<div class="col-sm-2">
 					<a href="#top" class="goUpButton">	
-						
-								<p><span class="glyphicon glyphicon-menu-up"></span> </p>
-								<p><span class="glyphicon glyphicon-menu-up"></span> </p>
-						
+						<p><span class="glyphicon glyphicon-menu-up"></span> </p>
+						<p><span class="glyphicon glyphicon-menu-up"></span> </p>
 					</a>	
+					
+					<div id="socialRowSide">
+						<ul id="socialMediaSide">
+							<li id="facebookSide">
+								<a href="url">
+									<img src="imForSite/facebook.png" alt="facebook logo">
+								</a>
+							</li>
+							<li id="googleSide"><a href="url">
+										<img src="imForSite/google-logo.png" alt="google logo">
+									</a>
+								</li>
+							<li id="linkedinSide"><a href="url">
+										<img src="imForSite/linkedin-logo.png" alt="linkedin logo">
+									</a>
+							</li>
+							<li id="skypeSide"><a href="url">
+										<img src="imForSite/skype-logo.png" alt="skype logo">
+									</a>
+							</li>
+							<li id="whatsappSide"><a href="url">
+										<img src="imForSite/whatsapp-logo.png" alt="whatsapp logo">
+									</a>
+							</li>
+							<li id ="twitterSide"><a href="url">
+										<img src="imForSite/twitter-logo.png" alt="twitter logo">
+									</a>
+							</li>
+						</ul>
+					</div>	
+					
 				</div>
 				
 				
 				<div class="col-sm-8 text-left">
 						
+					<div class="row" id="selection">
+						<div class="col-sm-3 selector">
+						<!--By default, the first item in the drop-down list is selected.
+						To define a pre-selected option, add the selected attribute to 
+						the option:-->
+							<label for="bike_id">Choose a bike</label>
+							<select class="form-control" id="bike_id" name="bike" >
+								<option value="bike1" selected>bike1</option>
+								<option value="bike2">bike2</option>
+								<option value="bike3">bike3</option>
+								<option value="bike4">bike4</option>
+								<option value="bike5">bike5</option>
+								<option value="bike6">bike6</option>
+								<option value="bike7">bike7</option>
+								<option value="bike8">bike8</option>
+								<option value="bike9">bike9</option>
+								<option value="bike10">bike10</option>
+								<option value="bike11">bike11</option>
+								<option value="bike12">bike12</option>
+								<option value="bike13">bike13</option>
+								<option value="bike14">bike14</option>
+								<option value="bike15">bike15</option>
+							</select>
+						</div>
 						
+						
+						<div class="col-sm-9 dates">
+							<div class="col-sm-4" id="pick-up-date">
+								<label for="date-input" >Pick up date</label>
+								<input class="form-control" type="date" value="2011-08-19" id="setDate" ><!--!!!!!!1поставить автомат определние дат!!!-->
+							</div>
+							
+							<div class="col-sm-1">
+							</div>
+							
+							
+							<div class="col-sm-4" id="pick-up-time">
+								<label for="time-input" class="col-sm-4 col-form-label">Time</label>
+  
+								<input class="form-control" type="time" value="13:45:00" id="time-input">
+  
+							</div>
+												
+						</div>	
+					</div>
+					
+					
+					
+					<div class="row" id="selection">
+						<div class="col-sm-3">
+						</div>
+						
+						<div class="col-sm-9 dates">
+							<div class="col-sm-4" id="drop-off-date">
+								<label for="date-input" class="col-sm-3 col-form-label">Drop off date</label>
+								<input class="form-control" type="date" value="" id="date-input"><!--!!!!!!1поставить автомат определние дат!!!-->
+							</div>
+							
+							<div class="col-sm-1">
+							</div>
+							
+							
+							<div class="col-sm-4" id="drop-off-time">
+								<label for="example-time-input" class="col-sm-4 col-form-label">Time</label>
+								<input class="form-control" type="time" value="13:45:00" id="time-input">
+							</div>
+							
+							
+						</div>	
 
-						
-						
-						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
 
-						
-						
-						
 						
 				</div>
+				
 				<div class="col-sm-2">
 				</div>
 			</div>
 		</section>	
 		
 		
-			<footer class="container-fluid">
-				<div class="row">
-					
-						
+			<footer class="container-fluid" id="foot">
+			
+			<div class="col-sm-2">
+			</div>
+			<div class="col-sm-8 about" >
+				<div class="col-sm-4" id ="siteMap">
+					<h4><strong>Site map</strong></h4>
+					<h5><a href="index.html">Home</a></h5>
+					<h5><a href="price.html">Price list</a></h5>
+					<h5><a href="reservation.html">Book a bike</a></h5>
+					<h5><a href="contacts.php">Contact</a></h5>
 				</div>
-			</footer>
+				<div class="col-sm-4 " id ="brands">
+					<h4><strong>Partners</strong></h4>
+					<h5><a id="Honda" href="http://powersports.honda.com/" target="_blank">Honda</a></h5>
+					<h5><a id="Kawasaki" href="https://www.kawasaki.com/" target="_blank">Kawasaki</a></h5>
+					<h5><a id="Suzuki" href="http://www.suzuki-moto.com/" target="_blank">Suzuki</a></h5>
+					<h5><a id="Yamaha" href="https://www.yamahamotorsports.com/motorcycle" target="_blank">Yamaha</a></h5>
+				</div>
+				
+				<div class="col-sm-4" id="contactInfo">
+					<h4><strong>MY V Bike Rental</strong></h4>
+					<h5><strong>Address:</strong> 20-250, I.Daszynskiego, 3a,</h5>
+					<h5>Lublin, Poland</h5>
+					<h5><strong>Business Hours:</strong> 10am-7pm Mon-Sat, 12pm-6pm Sun </h5>
+					<h5><strong>E-mail:</strong> myvbikes@gmail.com</h5>
+					<h5><strong>Tel:</strong> +12345678</h5>
+									
+					<!-- <div id="map" style="width:350px;height:300px;">MY V Bike</div>-->
+				</div>
+			</div>
+			<div class="col-sm-2">
+			</div>
+			
+			<div id="socialRow">
+				<ul id="socialMedia">
+					<li id="facebook">
+						<a href="url">
+							<img src="imForSite/facebook.png" alt="facebook logo">
+						</a>
+					</li>
+						<li id="google"><a href="url">
+								<img src="imForSite/google-logo.png" alt="google logo">
+							</a>
+						</li>
+					<li id="linkedin"><a href="url">
+								<img src="imForSite/linkedin-logo.png" alt="linkedin logo">
+							</a>
+					</li>
+					<li id="skype"><a href="url">
+								<img src="imForSite/skype-logo.png" alt="skype logo">
+							</a>
+					</li>
+					<li id="whatsapp"><a href="url">
+								<img src="imForSite/whatsapp-logo.png" alt="whatsapp logo">
+							</a>
+					</li>
+					<li id ="twitter"><a href="url">
+								<img src="imForSite/twitter-logo.png" alt="twitter logo">
+							</a>
+					</li>
+						
+				</ul>
+			</div>	
+			<div id ="rights">
+				<h5>MY V Bike Rental &copy; 2016</h5>
+			</div>
+		</footer>
 			
 			<!-- script -->
-		<script type="text/javascript" src="http://qoo.by/counter.js"></script>	
-		<script type='text/javascript' src='animation.js'></script>
+			<script>
+				function openNav() {
+					document.getElementById("mySidenav").style.width = "250px";
+				}
+
+				function closeNav() {
+					document.getElementById("mySidenav").style.width = "0";
+				}
+			</script>
+			
+			
+			
+			<script type='text/javascript' src='animation.js'></script>
+			
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-		<script>
-		function myFunction() {
-			var x = document.getElementById("myTopnav");
-			if (x.className === "topnav") {
-				x.className += " responsive";
-			} else {
-				x.className = "topnav";
-			}
-		}
-		</script>
-
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 	</body>
 </html>

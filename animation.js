@@ -1,10 +1,7 @@
 $(document).ready(function(){
-	
-	
-	$('#selectAll').addClass('active');
-	var amountScrolled = 380;
-	
-	
+		
+	var amountScrolled = 320;
+		
 	window.onscroll = function() {myFunction()};
 	
 	function myFunction() {
@@ -24,29 +21,52 @@ $(document).ready(function(){
 	
 	var width = $(window).width();//current
 	
-	$(".GaugeMeter").each(function(){
-		
-		console.log(width);
-		var x = document.getElementsByClassName(".animCircles");
-		console.log(x);
-		
-		if(width <768){
-			$(".GaugeMeter").attr("data-size", 80);
-			$(".GaugeMeter").attr("data-width", 8);
-			$(".GaugeMeter").toggleClass('changed');
-			
-		}
+	
+	
+	$('#selectAll').addClass('active');
+	
+	$('#selectAll').click(function(){
+		$('#sport, #tourist, #cruiser').fadeIn();
+		$('#sportSel,#tourSel, #cruiserSel').removeClass('active');
+		$(this).addClass('active');
 	});
 	
-	var height = $(window).height();//current
 	
+	$('#sportSel').click(function(){
+		$('#tourist, #cruiser').hide();
+		$('#selectAll, #tourSel, #cruiserSel').removeClass('active');
+		$(this).addClass('active');
+		$('#sport').fadeIn();
+	});
+	
+	
+	
+	$('#tourSel').click(function(){
+		$('#sport, #cruiser').hide();
+		$('#selectAll, #sportSel, #cruiserSel').removeClass('active');
+		$(this).addClass('active');
+		$("#tourist").fadeIn();
 		
+	});
 	
-	$(window).on("scroll",function() {
-		if ( $(window).scrollTop() >height/2 ) {
+	$('#cruiserSel').click(function(){
+		$('#sport, #tourist').hide();
+		$('#selectAll, #sportSel, #tourSel').removeClass('active');
+		$(this).addClass('active');
+		$("#cruiser").fadeIn();
+		
+	});
+	
+	var width = $(window).width();//current
+	
+	
+	$(".col-sm-6.bikePic").each(function(){
+		if(width <1100 && width > 768){
+			var column = width*0.33;
+			var newPaddingTop = column/5;
+			$(this).css('padding-top', newPaddingTop+'px');
 			
-			$(".GaugeMeter").gaugeMeter();
-			$(window).off("scroll");
+			console.log($(this).css('padding-top'));
 		}
-	});		
+	});
 });
