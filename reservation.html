@@ -42,7 +42,7 @@
 					<li class="leftMenuItem"><a  href="index.html" id="home"><strong>Home</strong></a></li>
 					<li class="leftMenuItem"><a  href="price.html" id="price"><strong>Prices</strong></a></li>
 					<li class="leftMenuItem"><a class="active" href="reservation.html" id="reservation"><strong>Rent</strong></a></li>
-					<li class="leftMenuItem"><a href="contact.html" id="contacts"><strong>Contact</strong></a></li>
+					<li class="leftMenuItem"><a href="contact.php" id="contacts"><strong>Contact</strong></a></li>
 				</ul>
 				
 				<div id="mySidenav" class="sidenav">
@@ -50,7 +50,7 @@
 				  <a href="index.html" id="home">Home</a>
 				  <a href="price.html" id="price">Prices</a>
 				  <a href="reservation.html" id="reservation">Rent</a>
-				  <a href="contact.html" id="contacts">Contact</a>
+				  <a href="contact.php" id="contacts">Contact</a>
 				</div>
 				
 				<a class="toggle" href="javascript:void(0);" onclick="openNav()">
@@ -177,13 +177,52 @@
 					</div>
 					
 					
+					<div class="row" id="price">
+						<label for="example-time-input" class="col-sm-4 col-form-label">Price</label>
+								<input class="form-control" type="text" value="" id="price">
 					
+					</div>
 					
+					<div class="row" id="Name">
+						<label for="example-time-input" class="col-sm-4 col-form-label">Name</label>
+						<input class="form-control" type="text" value="" id="name">
+					</div>
 					
+					<div class="row" id="YOB">
+						<label for="example-time-input" class="col-sm-4 col-form-label">Year of Birth</label>
+						<input class="form-control" type="text" value="" id="yearOfBirth">
+					</div>
 					
+					<div class="row" id="email">
+						<label for="example-time-input" class="col-sm-4 col-form-label">Email</label>
+						<input class="form-control" type="text" value="" id="email">
+					</div>
 					
+					<div class="row" id="phone">
+						<label for="example-time-input" class="col-sm-4 col-form-label">Phone</label>
+						<input class="form-control" type="text" value="" id="phone">
+					</div>
 					
+					<div class="row" id="comment">
+						<label for="message" class="col-sm-4 col-form-label" id="message"> Comments</label>
+						<div class="col-sm-12" id="messageZone">
+							<textarea class="form-control" row="4" name="message" ></textarea>
+						</div>
+					</div>
 					
+					<div class="row" id="test">
+						<label for="human" class="control-label" id="test">Human Test:</label>
+						<div id="math">
+							<h5 class="human">(2 + 2) by 2 = ?</h5>
+							<input type="text" class="form-control" id="human" >
+						</div>
+					</div>
+					
+					<div class="row" id="submit">
+						<div id="sendButton">
+							<button type="submit" id="submit" name="submit">Place order</button>
+						</div>
+					</div>
 
 						
 				</div>
@@ -204,7 +243,7 @@
 					<h5><a href="index.html">Home</a></h5>
 					<h5><a href="price.html">Price list</a></h5>
 					<h5><a href="reservation.html">Book a bike</a></h5>
-					<h5><a href="contacts.php">Contact</a></h5>
+					<h5><a href="contact.php">Contact</a></h5>
 				</div>
 				<div class="col-sm-4 " id ="brands">
 					<h4><strong>Partners</strong></h4>
@@ -218,7 +257,8 @@
 					<h4><strong>MY V Bike Rental</strong></h4>
 					<h5><strong>Address:</strong> 20-250, I.Daszynskiego, 3a,</h5>
 					<h5>Lublin, Poland</h5>
-					<h5><strong>Business Hours:</strong> 10am-7pm Mon-Sat, 12pm-6pm Sun </h5>
+					<h5><strong>Business Hours:</strong> 10am-7pm Mon-Sat</h5>
+					<h5>12pm-6pm Sun </h5>
 					<h5><strong>E-mail:</strong> myvbikes@gmail.com</h5>
 					<h5><strong>Tel:</strong> +12345678</h5>
 									

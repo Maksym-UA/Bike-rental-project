@@ -74,21 +74,20 @@ ul.topnav li a {
 ul.topnav li a:link {
 	color:black;
 } 
-
 .leftMenuItem:nth-child(1) a:not(.active):hover{
-	border-bottom: 4px solid rgba(102, 0, 34, 1);
+	border-bottom: 4px solid rgba(153, 51, 102, 1);
 }
 
 .leftMenuItem:nth-child(2) a:not(.active):hover{
 	border-bottom: 4px solid rgba(255, 0, 0, 1);
 }
 
-.leftMenuItem:nth-child(3) a:not(.active):hover{
+.leftMenuItem:nth-child(3) a:hover{
 	border-bottom: 4px solid rgba(0, 122, 204, 1);
 }
 
-.leftMenuItem:nth-child(4) a:not(.active):hover{
-	border-bottom: 4px solid rgba(230, 184, 0, 1);
+.leftMenuItem:nth-child(4) a:hover{
+	border-bottom: 4px solid rgba(251, 188, 5, 1);
 }
 
 
@@ -99,7 +98,7 @@ ul.topnav li a:link {
 }*/
 
 #myTopnav .active{
-	border-bottom: 4px solid rgba(230, 184, 0, 1);
+	border-bottom: 4px solid rgba(251, 188, 5, 1);
 	z-index:3;
 }
 
@@ -172,33 +171,24 @@ header #myTopnav li.icon img{
   
   #sketch_grid { z-index:-1; display: none;}
   
+  .logoName img {width: 90%;}
   
-  
-  .logoName img {	width: 90%;}
-  
-  footer #siteMap, footer #brands{
+ 	#socialRow li{
+		padding: 8px 8px;
+		margin:2px;
+	}
+	
+	.main .container-fluid #socialRowSide{display: none;}
+	
+	
+	footer #siteMap, footer #brands{
 		display: none;
 	}
 	
 	footer #contactInfo{
 		position: relative;
 		display: block;
-		
 	}	
-	
-	#socialRow li{
-		padding: 8px 8px;
-		margin:2px;
-	}
-	
-	
-	
-	.main .container-fluid .col-sm-8{
-	
-		padding:10px 35px;
-	}
-	.main .container-fluid #socialRowSide{display: none;}
- 
 }
 
 @media screen and (min-width: 480px) {
@@ -211,7 +201,9 @@ header #myTopnav li.icon img{
 	#socialMedia li {
 		padding: 8px 15px;
 		margin:2px;
-	}		
+	}	
+	
+	
 }
 
 
@@ -347,12 +339,9 @@ a:hover.goUpButton {
 
 .main .col-sm-8{
 	background:#ffffff;
-	padding:0px 35px 45px 35px;
+	padding:0px 35px 35px 35px;
 	box-shadow:0 6px 20px 0 rgba(0,0,0,0.25);
 	text-align: left;
-	
-	
-  
 }
 
 /*To not see any shadow on the sides, the (absolute value of the) spread radius (4th parameter) needs to be the same as the blur radius (3rd parameter).*/
@@ -421,30 +410,74 @@ a:hover.goUpButton {
 	border-bottom: 2px solid rgba(50,153,187, 1);
 }
 
-
-
 .col-sm-8 #map{
-	
 	height:350px;
 	margin: 0px -35px 0px -35px;
 }
 
-div.form-group{
-	margin-bottom:0px;
-	text-align: center;
+
+
+#iw-container  h5 {
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 22px;
+   font-weight: 200;
+   padding: 10px;
+   background-color: #48b5e9;
+   color: white;
+   margin: 2px;
+   border-radius: 2px 2px 0 0; /* In accordance with the rounding of the default infowindow corners. */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .col-sm-12.col-sm-offset-2{
 	margin-left: 0px;
+	padding: 10px;
 }
 
-.required {color:red; font-weight:bold}
-
-.col-sm-6.columns{
-	padding-bottom:0px;
+.required {
+	margin-left:-10px;
+	color:red; 
+	font-weight:bold
 }
 
-label.col-sm-6.control-label{
-	padding: 0px 0px 0px 15px;
+div.form-group{margin-bottom: 0px;}
+
+
+div.col-sm-6.form-group{
+	margin:0px;	
+	padding: 0px 15px;
+	
+}
+
+div#columns{
+	padding: 0px;
+	padding-top: 0px;
+}
+
+#columns .col-sm-12{
+	padding:0px;
+	
+}
+
+label.col-sm-6.control-label, label.col-sm-12.control-label{
+	padding: 8px 0px 3px 0px;
 	text-align: left;
 }
 
@@ -458,7 +491,7 @@ input.form-control, textarea.form-control{
  }
 
 #messageZone{
-	padding: 15px 30px;
+	padding: 0px 30px;
 }
 
 
@@ -471,7 +504,7 @@ input.form-control, textarea.form-control{
 
 
 #math{
-	width: 100px;
+	width: 110px;
     position: relative;
     top:0;
     bottom: 0;
@@ -482,7 +515,7 @@ input.form-control, textarea.form-control{
 
 
 #sendButton{
-	padding: 20px 30px;
+	padding: 15px 30px;
 	
 }
 
@@ -492,7 +525,7 @@ input.form-control, textarea.form-control{
     border: none;
 	color: white;
     font-size: 18px;
-	padding: 15px 45px;
+	padding: 15px;
 	width: 100%;
 }
 

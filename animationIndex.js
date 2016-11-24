@@ -1,6 +1,6 @@
 $(document).ready(function(){
 		
-	var amountScrolled = 320;
+	var amountScrolled = 300;
 		
 	window.onscroll = function() {myFunction()};
 	
@@ -54,38 +54,5 @@ $(document).ready(function(){
 		}
 	});		
 	
-	$('#selectAll').addClass('active');
-	
-	$('#selectAll').click(function(){
-		$('#sport, #tourist, #cruiser').fadeIn();
-		$('#sportSel,#tourSel, #cruiserSel').removeClass('active');
-		$(this).addClass('active');
-	});
-	
-	
-	$('#sportSel').click(function(){
-		$('#tourist, #cruiser').hide();
-		$('#selectAll, #tourSel, #cruiserSel').removeClass('active');
-		$(this).addClass('active');
-		$('#sport').fadeIn();
-	});
-	
-	
-	
-	$('#tourSel').click(function(){
-		$('#sport, #cruiser').hide();
-		$('#selectAll, #sportSel, #cruiserSel').removeClass('active');
-		$(this).addClass('active');
-		$("#tourist").fadeIn();
-		
-	});
-	
-	$('#cruiserSel').click(function(){
-		$('#sport, #tourist').hide();
-		$('#selectAll, #sportSel, #tourSel').removeClass('active');
-		$(this).addClass('active');
-		$("#cruiser").fadeIn();
-		
-	});
 	
 });

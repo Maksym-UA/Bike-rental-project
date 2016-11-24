@@ -42,7 +42,7 @@
 					<li class="leftMenuItem"><a class="active" href="index.html" id="home"><strong>Home</strong></a></li>
 					<li class="leftMenuItem"><a href="price.html" id="price"><strong>Prices</strong></a></li>
 					<li class="leftMenuItem"><a href="reservation.html" id="reservation"><strong>Rent</strong></a></li>
-					<li class="leftMenuItem"><a href="contact.html" id="contacts"><strong>Contact</strong></a></li>
+					<li class="leftMenuItem"><a href="contact.php" id="contacts"><strong>Contact</strong></a></li>
 				</ul>
 				
 				<div id="mySidenav" class="sidenav">
@@ -50,7 +50,7 @@
 				  <a href="index.html" id="home">Home</a>
 				  <a href="price.html" id="price">Prices</a>
 				  <a href="reservation.html" id="reservation">Rent</a>
-				  <a href="contact.html" id="contacts">Contact</a>
+				  <a href="contact.php" id="contacts">Contact</a>
 				</div>
 				
 				<a class="toggle" href="javascript:void(0);" onclick="openNav()">
@@ -130,17 +130,17 @@
 						<ul class="animCircles">
 							<li id="animItem">
 								<div class="GaugeMeter" id="PreviewGaugeMeter_4" data-percent="56" data-used="50" data-total="50" data-append=null  data-size="170" data-theme="LightBlue-DarkBlue" 
-								data-back=null data-animate_gauge_colors=null data-animate_text_colors=null data-width="15" data-label="customers" data-label_color="#333333" data-stripe=null></div>
+								data-back=null data-animate_gauge_colors=null data-animate_text_colors=null data-width="11" data-label="customers" data-label_color="#333333" data-stripe=null></div>
 							</li>
 							
 							<li id="animItem">
 								<div class="GaugeMeter" id="PreviewGaugeMeter_4" data-percent="74" data-used="74" data-total="74" data-prepend=null data-append=null  data-size="170" data-theme="Red-Green"
-								data-back=null data-animate_gauge_colors="1" data-animate_text_colors=null data-width="15" data-style= "Arch" data-label="rents" data-label_color="#333333" data-stripe=null></div>
+								data-back=null data-animate_gauge_colors="1" data-animate_text_colors=null data-width="11" data-style= "Arch" data-label="rents" data-label_color="#333333" data-stripe=null></div>
 							</li>
 							
 							<li id="animItem">
 								<div class="GaugeMeter" id="PreviewGaugeMeter_4" data-percent="15" data-used="15" data-total="18" data-prepend=null data-append=null  data-size="170" data-theme="LightBlue-DarkBlue" 
-								data-back=null data-animate_gauge_colors="1" data-animate_text_colors=null data-width="15" data-label="bikes" data-label_color="#333333" data-stripe=null></div>
+								data-back=null data-animate_gauge_colors="1" data-animate_text_colors=null data-width="11" data-label="bikes" data-label_color="#333333" data-stripe=null></div>
 							</li>
 						</ul>
 					</div>
@@ -169,7 +169,7 @@
 					<h5><a href="index.html">Home</a></h5>
 					<h5><a href="price.html">Price list</a></h5>
 					<h5><a href="reservation.html">Book a bike</a></h5>
-					<h5><a href="contacts.php">Contact</a></h5>
+					<h5><a href="contact.php">Contact</a></h5>
 				</div>
 				<div class="col-sm-4 " id ="brands">
 					<h4><strong>Partners</strong></h4>
@@ -183,7 +183,8 @@
 					<h4><strong>MY V Bike Rental</strong></h4>
 					<h5><strong>Address:</strong> 20-250, I.Daszynskiego, 3a,</h5>
 					<h5>Lublin, Poland</h5>
-					<h5><strong>Business Hours:</strong> 10a-7p Mon-Sat, 12p-6p Sun </h5>
+					<h5><strong>Business Hours:</strong> 10am-7pm Mon-Sat</h5>
+					<h5>12pm-6pm Sun </h5>
 					<h5><strong>E-mail:</strong> myvbikes@gmail.com</h5>
 					<h5><strong>Tel:</strong> +12345678</h5>
 									
@@ -228,24 +229,7 @@
 			</div>
 		</footer>
 			
-			<!-- 
 			
-			<script>
-					
-					$(document).ready(function(){
-					$("#nav-mobile").html($("#nav-main").html());
-					$("#nav-trigger span").click(function(){
-						if ($("nav#nav-mobile ul").hasClass("expanded")) {
-							$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
-							$(this).removeClass("open");
-						} else {
-							$("nav#nav-mobile ul").addClass("expanded").slideDown(250);
-							$(this).addClass("open");
-						}
-					});
-				});
-			</script>-->
-
 			<script>
 				function openNav() {
 					document.getElementById("mySidenav").style.width = "250px";
@@ -262,7 +246,7 @@
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+		
 		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 		<script src="jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script> 
 	</body>

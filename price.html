@@ -39,21 +39,16 @@
 			<a name="top"></a> 
 				
 				<ul class="topnav" id="myTopnav">
-					<li class="leftMenuItem"><a href="index.html" id="home"><strong>Home</strong></a></li>
-					<li class="leftMenuItem"><a class="active" href="price.html" id="price"><strong>Prices</strong></a></li>
-					<li class="leftMenuItem"><a href="reservation.html" id="reservation"><strong>Rent</strong></a></li>
-					<li class="leftMenuItem"><a href="contact.html" id="contacts"><strong>Contact</strong></a></li>
+					<li><a href="" class="closebtn" >&times;</a></li>
+					<li><a href="index.html" id="home"><strong>Home</strong></a></li>
+					<li><a class="active" href="price.html" id="price"><strong>Prices</strong></a></li>
+					<li><a href="reservation.html" id="reservation"><strong>Rent</strong></a></li>
+					<li><a href="contact.php" id="contacts"><strong>Contact</strong></a></li>
 				</ul>
 				
-				<div id="mySidenav" class="sidenav">
-				  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-				  <a href="index.html" id="home">Home</a>
-				  <a href="price.html" id="price">Prices</a>
-				  <a href="reservation.html" id="reservation">Rent</a>
-				  <a href="contact.html" id="contacts">Contact</a>
-				</div>
 				
-				<a class="toggle" href="javascript:void(0);" onclick="openNav()">
+				
+				<a href="" class="toggle" >
 					<img src="imForSite/glyphicons-114-justify.png" alt="glyphicon menu">
 				</a>
 				
@@ -66,7 +61,7 @@
 
 			
 			<div class="container-fluid text-center">
-				<div class="col-sm-2">
+				<div class="col-sm-2 left">
 					<a href="#top" class="goUpButton">	
 						<p><span class="glyphicon glyphicon-menu-up"></span> </p>
 						<p><span class="glyphicon glyphicon-menu-up"></span> </p>
@@ -119,14 +114,14 @@
 						
 					<div class="row" id="sport">
 						<div class="col-sm-6 bikePic">
-							<img class="bikes" src="imForSite/Kawasaki Ninja 300.png" alt="motorbike">
+							<img class="bikes" src="imForSite/KawasakiNinja300.png" alt="motorbike">
 						</div>
 						
 						
 						<div class="col-sm-6 data">
 															
 							<table class="specs">
-								<tr><th colspan="5"><h4>Kawasaki Ninja 300</h4></th></tr>
+								<tr><th colspan="5">Kawasaki Ninja 300</th></tr>
 								<tr>
 									<td><h5>Type</h5></td>
 									<td><h5>Weight</h5></td>
@@ -180,7 +175,7 @@
 						<div class="col-sm-6 data">
 															
 							<table class="specs">
-								<tr><th colspan="5"><h4>Kawasaki GTR 1400</h4></th></tr>
+								<tr><th colspan="5">Kawasaki GTR 1400</th></tr>
 								<tr>
 									<td><h5>Type</h5></td>
 									<td><h5>Weight</h5></td>
@@ -236,7 +231,7 @@
 						<div class="col-sm-6 data">
 															
 							<table class="specs">
-								<tr><th colspan="5"><h4>Yamaha Midnight Star XVS1300A</h4></th></tr>
+								<tr><th colspan="5">Yamaha Midnight Star XVS1300A</th></tr>
 								<tr>
 									<td><h5>Type</h5></td>
 									<td><h5>Weight</h5></td>
@@ -256,7 +251,7 @@
 							<div class="row orderBtn">
 					
 							<form>
-								<input class= "ourOfferBtn" type="button" value="Make reservation" onclick="window.location.href='reservation.html'"/>
+								<input class= "ourOfferBtn" id="3" type="button" value="Make reservation" onclick="window.location.href='reservation.html'"/>
 							</form>
 											
 							</div>
@@ -302,7 +297,7 @@
 					<h5><a href="index.html">Home</a></h5>
 					<h5><a href="price.html">Price list</a></h5>
 					<h5><a href="reservation.html">Book a bike</a></h5>
-					<h5><a href="contacts.php">Contact</a></h5>
+					<h5><a href="contact.php">Contact</a></h5>
 				</div>
 				<div class="col-sm-4 " id ="brands">
 					<h4><strong>Partners</strong></h4>
@@ -316,7 +311,8 @@
 					<h4><strong>MY V Bike Rental</strong></h4>
 					<h5><strong>Address:</strong> 20-250, I.Daszynskiego, 3a,</h5>
 					<h5>Lublin, Poland</h5>
-					<h5><strong>Business Hours:</strong> 10a-7p Mon-Sat, 12p-6p Sun </h5>
+					<h5><strong>Business Hours:</strong> 10am-7pm Mon-Sat</h5>
+					<h5>12pm-6pm Sun </h5>
 					<h5><strong>E-mail:</strong> myvbikes@gmail.com</h5>
 					<h5><strong>Tel:</strong> +12345678</h5>
 									
@@ -362,19 +358,39 @@
 		</footer>
 			
 			<!-- script -->
+			
+			
 			<script>
-				function openNav() {
-					document.getElementById("mySidenav").style.width = "250px";
-				}
-
-				function closeNav() {
-					document.getElementById("mySidenav").style.width = "0";
-				}
+				$(document).ready(function(){
+				
+					$('.toggle').click( function(){
+					
+						$('#myTopnav').removeClass('topnav');
+						$('#myTopnav').addClass('sidenav');
+						
+						$('.closebtn').css("display", "block");
+						$('#myTopnav a.active').css("border-bottom", "4px solid rgba(255, 0, 0, 0)");
+						$('#myTopnav').animate({left: '0px'}, "fast");
+					
+						return false;
+					});
+					
+					$('.closebtn').click( function(){
+							
+							$('#myTopnav').animate({left: -250}, 200, function(){
+									$('#myTopnav').addClass('topnav'); 
+									$('.closebtn').css("display", "none");
+									$('#myTopnav a.active').css("border-bottom", "4px solid rgba(255, 0, 0, 1)");
+								}
+							);
+							
+							return false;
+					});
+				});
 			</script>
 			
 			<script type='text/javascript' src='animation.js'></script>
-			
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 	</body>

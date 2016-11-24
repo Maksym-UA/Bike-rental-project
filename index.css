@@ -85,11 +85,11 @@ ul.topnav li a:link {
 	color:black;
 } 
 
-.leftMenuItem:nth-child(1) a:not(.active):hover{
-	border-bottom: 4px solid rgba(102, 0, 34, 1);
+.leftMenuItem:nth-child(1) a:hover{
+	border-bottom: 4px solid rgba(153, 51, 102, 1);
 }
 
-.leftMenuItem:nth-child(2) a:not(.active):hover{
+.leftMenuItem:nth-child(2) a:hover{
 	border-bottom: 4px solid rgba(255, 0, 0, 1);
 }
 
@@ -98,8 +98,9 @@ ul.topnav li a:link {
 }
 
 .leftMenuItem:nth-child(4) a:hover{
-	border-bottom: 4px solid rgba(230, 184, 0, 1);
+	border-bottom: 4px solid rgba(251, 188, 5, 1);
 }
+
 
 
 /*ul.topnav li:not(:last-child) a:hover, ul.topnav li:not(:last-child)  {
@@ -109,7 +110,7 @@ ul.topnav li a:link {
 }*/
 
 #myTopnav .active{
-	border-bottom: 4px solid #009933;
+	border-bottom: 4px solid rgba(153, 51, 102, 1);
 	z-index:3;
 }
 

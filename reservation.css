@@ -81,11 +81,11 @@ ul.topnav li a:link {
 	color:black;
 } 
 
-.leftMenuItem:nth-child(1) a:not(.active):hover{
-	border-bottom: 4px solid rgba(102, 0, 34, 1);
+.leftMenuItem:nth-child(1) a:hover{
+	border-bottom: 4px solid rgba(153, 51, 102, 1);
 }
 
-.leftMenuItem:nth-child(2) a:not(.active):hover{
+.leftMenuItem:nth-child(2) a:hover{
 	border-bottom: 4px solid rgba(255, 0, 0, 1);
 }
 
@@ -94,7 +94,7 @@ ul.topnav li a:link {
 }
 
 .leftMenuItem:nth-child(4) a:hover{
-	border-bottom: 4px solid rgba(230, 184, 0, 1);
+	border-bottom: 4px solid rgba(251, 188, 5, 1);
 }
 
 
@@ -105,7 +105,7 @@ ul.topnav li a:link {
 }*/
 
 #myTopnav .active{
-	border-bottom: 4px solid #009933;
+	border-bottom: 4px solid rgba(0, 122, 204, 1);
 	z-index:3;
 }
 
@@ -171,7 +171,7 @@ header #myTopnav li.icon img{
   .toggle {
 	float: right;
     display: inline-block;
-	padding: 15px 15px 10px 0px;	
+	padding: 15px 15px 0px 0px;	
 	z-index:3;
   }
   
