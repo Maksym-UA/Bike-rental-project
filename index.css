@@ -363,7 +363,11 @@ a:hover.goUpButton {
     color: white;
 }
 
-.ourOfferBtn:hover{	background-color:rgba( 255,153,0, 0.8);}
+.ourOfferBtn:hover{	
+	background-color:rgba( 255,153,0, 0.8);
+	-webkit-box-shadow: 0 8px 6px -6px grey;
+	-moz-box-shadow: 0 8px 6px -6px grey;
+	box-shadow: 0 8px 5px -5px grey;}
 
 .ourOfferBtn a:hover{color:white; text-decoration:none;}
 
@@ -376,7 +380,7 @@ footer {
   width:100%;
   color: black;
   background-color: #e6e6e6;
-  margin-top:15px;
+  margin-top:35px;
 }
 
 #foot{padding: 0px 0px 0px 0px;}

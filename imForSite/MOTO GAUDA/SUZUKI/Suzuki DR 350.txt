@@ -1,0 +1,7 @@
+Type:   City Enduro 
+
+Weight: 130 kg
+
+Torque: 28 Nm
+
+Speed:  140 Kilometer/Hour (km/h)

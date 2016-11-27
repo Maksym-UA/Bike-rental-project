@@ -14,7 +14,8 @@ body {margin:0;}
 	src: url('data/Kelvinized.ttf') format('truetype');
 }
 
-header{	padding: 0px;}
+header{	padding: 0px;
+border-bottom: 2px solid rgba(233,233,233,1);}
 
 
 #sketch_grid { 
@@ -25,14 +26,6 @@ header{	padding: 0px;}
 	z-index:0;
 }
 	
-/*
-
-.companyName{
-	font-family: 'Kelvinized', Turnpike, Hardman, Verdana; 
-	text-align: center;
-	font-size: 2.8em;	
-	z-index:1;
-}*/
 
 .logoName{
 	display: flex;
@@ -55,7 +48,7 @@ header{	padding: 0px;}
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	border-bottom: 2px solid rgba(233,233,233,1);
+	
 	justify-content: center;
     align-items: center;	
 }
@@ -266,7 +259,7 @@ header #myTopnav li.icon img{
     background: -o-linear-gradient( #f2f2f2, #ffffff); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient( #f2f2f2, #ffffff); /* For Firefox 3.6 to 15 */
     background: linear-gradient( #f2f2f2, #ffffff); /* Standard syntax (must be last) */
-	border-top: 
+	
 }
 
 .main .col-sm-2{	display: block;}

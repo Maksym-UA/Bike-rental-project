@@ -14,7 +14,7 @@ body {margin:0;}
 }
 
 header{	padding: 0px;
-	}
+border-bottom: 2px solid rgba(233,233,233,1);}
 
 #sketch_grid { 
 	position:absolute;

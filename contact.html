@@ -12,6 +12,8 @@
 				
 			<!--<iframe src="http://free.timeanddate.com/clock/i5fpvar2/n1446/tct/pct/ftb/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="90" height="34" allowTransparency="true"></iframe>-->
 			<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">	
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.26&sensor=false"></script>
+		
 		
 			<!--[if lt IE 9]>
 			<script type="text/javascript">alert("Your browser does not support the canvas tag.");</script>
@@ -280,10 +282,12 @@
 						});
 
 					  var infowindow = new google.maps.InfoWindow({
-						content: '<h5><strong>MY V Bike Rental</strong></h5>' + '<p><strong>Address:</strong> 20-250, I.Daszynskiego, 3a</p>' +
+						content: '<div id="iw-container">' + '<h5><strong>MY V Bike Rental</strong></h5>' + '<p><strong>Address:</strong> 20-250, I.Daszynskiego, 3a</p>' +
 						'<p>Lublin, Poland</p>' + '<p><strong>Business Hours:</strong> 10am-7pm Mon-Sat </p>' + '<p> 12pm-6pm Sun </p>' +
-						'<p><strong>E-mail:</strong> myvbikes@gmail.com</p>' +	'<p><strong>Tel:</strong> +12345678</p>'						
+						'<p><strong>E-mail:</strong> myvbikes@gmail.com</p>' +	'<p><strong>Tel:</strong> +12345678</p>' +	'</div>'					
 					  });
+					  
+					  
 					  
 				}
 			</script>

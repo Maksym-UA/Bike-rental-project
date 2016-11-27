@@ -1,0 +1,7 @@
+Type:   Street 
+
+Weight: 269 kg
+
+Torque: 69 Nm
+
+Speed:  160 Kilometer/Hour (km/h)

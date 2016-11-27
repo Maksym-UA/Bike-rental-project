@@ -1,0 +1,7 @@
+Type:   Tourist
+
+Weight: 257 kg
+
+Torque: 117 Hm
+
+Speed:  195 Kilometer/Hour (km/h)

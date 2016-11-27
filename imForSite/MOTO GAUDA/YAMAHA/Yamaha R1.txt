@@ -1,0 +1,7 @@
+Type:   Sport
+
+Weight: 170 kg
+
+Torque: 115.5 Nm
+
+Speed:  265.5 Kilometer/Hour (km/h)

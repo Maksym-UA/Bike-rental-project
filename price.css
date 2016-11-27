@@ -13,12 +13,8 @@ body {margin:0;}
 	src: url('data/Kelvinized.ttf') format('truetype');
 }
 
-header{	
-	padding: 0px;
-	background-color: rgba( 255,255,255);
-	z-index:3;
-	
-	}
+header{	padding: 0px;
+border-bottom: 2px solid rgba(233,233,233,1);}
 
 #sketch_grid { 
 	position:absolute;
@@ -550,12 +546,14 @@ td {
 	
 }
 
-.ourOffer{
-	text-decoration: none;
-    color: white;
-}
 
-.ourOfferBtn:hover{	background-color:rgba( 255,153,0, 0.8);}
+
+.ourOfferBtn:hover{	
+	background-color:rgba( 255,153,0, 0.8);
+	-webkit-box-shadow: 0 8px 6px -6px grey;
+	-moz-box-shadow: 0 8px 6px -6px grey;
+	box-shadow: 0 8px 5px -5px grey;
+	}
 
 .ourOfferBtn a:hover{color:white; text-decoration:none;}
 
