@@ -14,7 +14,7 @@ body {margin:0;}
 }
 
 header{	padding: 0px;
-}
+border-bottom: 2px solid rgba(233,233,233,1);}
 
 #sketch_grid { 
 	position:absolute;
@@ -37,7 +37,6 @@ header{	padding: 0px;
 .logoName img {
 	display: block;
 	width: 800px;
-	
 	margin: auto;
 	z-index:1;
 }
@@ -92,7 +91,7 @@ ul.topnav  li:nth-child(5) a:hover{border-bottom: 4px solid rgba(230, 184, 0, 1)
 }*/
 
 #myTopnav .active{
-	border-bottom: 4px solid rgba(102, 0, 34, 1);
+	border-bottom: 4px solid rgba(230, 184, 0, 1);
 	z-index:3;
 }
 
@@ -100,6 +99,11 @@ ul.topnav li.icon {display: none;}
 
 #myTopnav li .closebtn{display: none;}
 
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 
 /*-------------------side navigation------------------------------*/
 .toggle{display: none;}
@@ -109,19 +113,11 @@ ul.topnav li.icon {display: none;}
 
 
 
-
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
 
-
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
 
 
 /*---------------------------------media query--------------------*/
@@ -143,8 +139,6 @@ ul.topnav li.icon {display: none;}
   
   .logoName img {	width: 90%;}
   
-  
-  
   div.col-sm-2.left{ padding: 0px;}
   
   footer #siteMap, footer #brands{
@@ -161,13 +155,16 @@ ul.topnav li.icon {display: none;}
 		margin:2px;
 	}
 	
-	#animItem:nth-child(2) {	display:none;}
+	
 	
 	.main .container-fluid .col-sm-8{
-			padding:10px 35px;
+			padding:0px 35px 10px 35px;
 	}
 	
 	.main .container-fluid #socialRowSide{display: none;}
+	
+	
+	
 	.sidenav {
     height: 100%;
     width: 250px;
@@ -209,6 +206,8 @@ ul.topnav li.icon {display: none;}
 		margin-left: 50px;
 	}
 	
+	
+	
  
 }
 
@@ -218,25 +217,17 @@ ul.topnav li.icon {display: none;}
 	.col-sm-8 .about{
 		display: inline-block;
 	}
-	
-	
 		
 	#socialMedia li {
 		padding: 8px 15px;
 		margin:2px;
-	}
+	}	
 	
 	
 }
 
-@media screen and (max-width: 480px) {
-	
-	
-	#slide .carousel-inner img{
-	  height: 180px;
-  }
-}
-	
+
+
 
 /* For mobile phones: */
 [class*="col-"] {
@@ -274,8 +265,8 @@ ul.topnav li.icon {display: none;}
 }
 
 
-/*--------------------------------main section-------------------------------*/
 
+/*--------------------------------main section-------------------------------*/
 
 .main{
 	background: #ffffff; /* For browsers that do not support gradients */
@@ -285,24 +276,14 @@ ul.topnav li.icon {display: none;}
     background: linear-gradient( #f2f2f2, #ffffff); /* Standard syntax (must be last) */
 	
 }
+
 .main .col-sm-2{	display: block;}
 
 .main .goUpButton :nth-child(1){
 	padding-top:10%;
 	margin-bottom: -12px;
 }
-
-#slide{	padding:0px;}
-
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 100%;
-      margin: auto;
-  }
-  
- #myCarousel{z-index:0;}
-  
-  
+ 
  
 a.goUpButton{
 	display: none;
@@ -323,72 +304,188 @@ a:hover.goUpButton {
 	color: white;
 }
 
-.main .col-sm-8{
-	background:#ffffff;
-	padding:45px 35px 10px 35px;
-	-webkit-box-shadow: 0 8px 6px -6px grey;
-	-moz-box-shadow: 0 8px 6px -6px grey;
-	box-shadow: 0 8px 5px -5px grey;
-	text-align: left;
+
+#socialRowSide{
+	position: fixed;
+	padding-top: 15px;
+	padding-left: 0px;
+	left: 0px;
+	float: left;
+	z-index:2;
+}
+	
+	
+
+
+#socialMediaSide{
+	display: block;
+    list-style-type: none;
+	margin: 0px;
+	padding-left: 0px;
+	padding: 10px 10px 10px 0px;
 }
 
+#socialMediaSide  li{
+	width:60px;
+	padding: 10px;
+	-webkit-transition: width 2s; /* Safari */
+    transition: width 1s;
+	opacity:0.8;
+	list-style-type: none;
+}
+
+#socialMediaSide  li:hover {width: 70px;}
+
+#facebookSide{background-color: #3b5998;  }
+
+#googleSide{background-color:  #d34836;}
+
+#linkedinSide{background-color: #0077B5;}
+
+#skypeSide{background-color: #12a5f4;}
+
+#whatsappSide{background-color:  #34af23;}
+
+#twitterSide{background-color: #0084b4;}
+
+
+#socialRowSide li  img{width: 28px;}
+
+
+
+
+
+
+
+.main .col-sm-8{
+	background:#ffffff;
+	padding:0px 70px 70px 70px;
+	box-shadow:0 6px 20px 0 rgba(0,0,0,0.25);
+	text-align: left;
+}
 
 /*To not see any shadow on the sides, the (absolute value of the) spread radius (4th parameter) needs to be the same as the blur radius (3rd parameter).*/
 
 
-.main .col-sm-8 h4 {
-	margin-bottom: 35px;
-	font-family: 'Cabin', sans-serif;
+
+
+
+.col-sm-8 #map{
+	height:350px;
+	margin: 0px -70px 0px -70px;
+}
+
+
+/*------map marker-----*/
+#iw-container  h5 {
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 22px;
+   font-weight: 200;
+   padding: 10px;
+   background-color: #48b5e9;
+   color: white;
+   margin: 2px;
+   border-radius: 2px 2px 0 0; /* In accordance with the rounding of the default infowindow corners. */
+}
+
+
+
+
+.col-sm-12.col-sm-offset-2{
+	margin-left: 0px;
+	padding: 10px;
+}
+
+.required {
+	margin-left:-10px;
+	color:red; 
+	font-weight:bold
+}
+
+div.form-group{margin-bottom: 0px;}
+
+
+div.col-sm-6.form-group{
+	margin:0px;	
+	padding: 0px 15px;
 	
 }
 
-.animation{	padding: 25px 0px 25px 0px;}
-
-
-.animCircles {	
-	display: flex;
-	padding-left: 0px;
+div#columns{
+	padding: 0px;
+	padding-top: 0px;
 }
 
-.animCircles li{
-	display: inline;
-	margin: auto;		
-}
-
-.GaugeMeter{margin-right: 0px;}
-
-.orderBtn{
-	display: block;
-	padding: 0px 0px 25px 0px;
-}
-
-.ourOfferBtn{
+#columns .col-sm-12{
+	padding:0px;
 	
-	cursor: pointer;  
-	border: none;  
+}
+
+label.col-sm-6.control-label, label.col-sm-12.control-label{
+	padding: 8px 0px 3px 0px;
+	text-align: left;
+}
+
+input.form-control, textarea.form-control{
+	border: 1px solid rgba(50,153,187, .5);
+	border-radius:0px;
+}
+
+
+.col-sm-12 input:focus, #messageZone textarea:focus, #math input:focus{
+    border-color: rgba( 255,153,0, 1);
+    box-shadow: 0 0 10px rgba( 255,153,0, .4);
+}
+
+#messageLabel{
+	padding-left:30px;
+ }
+
+#messageZone{
+	padding: 0px 30px;
+}
+
+
+
+.human, #test  {
 	display: block;
-	margin: auto;
+	text-align:center;
+	padding-bottom: 10px;
+}
+
+
+#math{
+	width: 110px;
+    position: relative;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+#sendButton{
+	padding: 15px 30px;
+	text-align: center;
+}
+
+#submit{
+	position: relative;
 	background-color: rgba( 255,153,0, 1);
-   	color: white;
-    font-size: 1.2em;
-	padding: 10px 35px;
-	
-	
+    border: none;
+	color: white;
+    font-size: 1.3em;
+	padding: 15px 55px;
 }
 
-.ourOffer{
-	text-decoration: none;
-    color: white;
-	
-}
 
-.ourOfferBtn:hover{	
+#submit:hover{	
 	background-color:rgba( 255,153,0, 0.8);
 	-webkit-box-shadow: 0 8px 6px -6px grey;
 	-moz-box-shadow: 0 8px 6px -6px grey;
-	box-shadow: 0 8px 5px -5px grey;}
-
-.ourOfferBtn a:hover{color:white; text-decoration:none;}
+	box-shadow: 0 8px 5px -5px grey;
+}
 
 
 
@@ -398,8 +495,8 @@ footer {
   font-size: 12px;
   width:100%;
   color: black;
-  background-color: #e6e6e6;
-  margin-top:35px;
+  background-color: #E9E9E9;
+  margin-top:15px;
 }
 
 #foot{padding: 0px 0px 0px 0px;}
@@ -436,7 +533,7 @@ footer {
 	position: relative;
 	display: inline-block;
 	width:100%;
-	background-color: #808080;
+	background-color: #BCBCBC;
 }
 
 #socialMedia{
@@ -472,76 +569,7 @@ footer #map{z-index:5;}
 	display: inline-block;
 	width:100%;   
 	color: white;
-	background-color: #333333;
+	background-color: #424242;
 	padding: 0px ;
 	text-align: center;
-}
-
-/*----------------gaugemeter----------------------*/
-.GaugeMeter {
-		
-	position: Relative;
-	text-align: Center;
-	overflow: Hidden;
-	cursor: Default;
-	display: block;
-	}
-
-	.GaugeMeter::after {
-	content: "";			  
-	display: block;
-	width: 90px;
-	height: 2px;			  
-	background: rgba(0,0,0,0.1);			  
-	border-radius: 50%;			  
-	box-shadow: 0 0 3px 4px rgba(0,0,0,0.1);			 
-	margin: 5px auto;					  	  
-	}
-				/*You can't manipulate :after, because it's not technically part of 
-				the DOM and therefore is inaccessible by any JavaScript. But you can 
-				add a new class with a new :after specified.*/
-				
-				.GaugeMeter.changed:after {
-					content: "";
-				  display: block;
-				  width: 35px;
-				  height: 2px;
-				  background: rgba(0,0,0,0.1);
-				  border-radius: 50%;
-				  box-shadow: 0 0 1.5px 2px rgba(0,0,0,0.1);
-				  margin: 5px auto;
-					
-				}
-
-				.GaugeMeter SPAN, .GaugeMeter B {
-				  width: 54%;
-				  position: Absolute;
-				  text-align: Center;
-				  display: Inline-Block;
-				  color: RGBa(255,0,0,.8);
-				  font-weight: 100;
-				  font-family: "Open Sans", Arial;
-				  overflow: Hidden;
-				  white-space: NoWrap;
-				  text-overflow: Ellipsis;
-				  margin: 0 23%;
-				}
-
-				.GaugeMeter[data-style="Semi"] B {
-				  width: 40%;
-				  margin: 0 10%;
-				}
-
-				.GaugeMeter S, .GaugeMeter U {
-				  text-decoration: None;
-				  font-size: 1.5em;
-				  font-weight: 200;
-				  opacity: .6;
-				}
-
-		.GaugeMeter B {
-		  color: #1111;
-		 
-		  font-weight: 400;
-		  opacity: 1;
-		}
+}}
