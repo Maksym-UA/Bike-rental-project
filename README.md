@@ -1,3 +1,12 @@
-# projet-for-Gauda
-#there are 3 of us: students at WSEI
-#as an assignment we chose to create a website for renting bikes
+# Bike rental 
+
+Service to rent bikes developed with HTML, CSS, JavaScript, PHP, SQL.
+You can visit it by clicking [here](http://pydega.biz.ht/)
+
+
+
+### CONTACT
+
+Please send you feedback to
+
+  max.savin3@gmail.com
