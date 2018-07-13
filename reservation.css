@@ -720,3 +720,7 @@ footer #map{z-index:5;}
 	padding: 0px ;
 	text-align: center;
 }
+
+#rights a{
+	color: white;
+}

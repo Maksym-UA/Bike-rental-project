@@ -163,7 +163,7 @@ function test_input($data) {
 										<img src="imForSite/google-logo.png" alt="google logo">
 									</a>
 								</li>
-							<li id="linkedinSide"><a href="url">
+							<li id="linkedinSide"><a href="https://www.linkedin.com/in/maksymsavin/">
 										<img src="imForSite/linkedin-logo.png" alt="linkedin logo">
 									</a>
 							</li>
@@ -310,7 +310,7 @@ function test_input($data) {
 								<img src="imForSite/google-logo.png" alt="google logo">
 							</a>
 						</li>
-					<li id="linkedin"><a href="url">
+					<li id="linkedin"><a href="https://www.linkedin.com/in/maksymsavin/">
 								<img src="imForSite/linkedin-logo.png" alt="linkedin logo">
 							</a>
 					</li>
@@ -331,6 +331,9 @@ function test_input($data) {
 			</div>	
 			<div id ="rights">
 				<h5>MY V Bike Rental &copy; 2016</h5>
+				<a href="http://pydega.com/">
+					<h5>Press this link to contact me.</h5>
+				</a>
 			</div>
 		</footer>
 			

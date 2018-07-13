@@ -572,4 +572,8 @@ footer #map{z-index:5;}
 	background-color: #424242;
 	padding: 0px ;
 	text-align: center;
-}}
+}
+
+#rights a{
+	color: white;
+}

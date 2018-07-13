@@ -477,6 +477,10 @@ footer #map{z-index:5;}
 	text-align: center;
 }
 
+#rights a{
+	color: white;
+}
+
 /*----------------gaugemeter----------------------*/
 .GaugeMeter {
 		

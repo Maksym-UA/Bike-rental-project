@@ -100,7 +100,7 @@ if (isset($_POST['add']))                                   //проверка одправлен
 											<img src="imForSite/google-logo.png" alt="google logo">
 										</a>
 									</li>
-								<li id="linkedinSide"><a href="url">
+								<li id="linkedinSide"><a href="https://www.linkedin.com/in/maksymsavin/">
 											<img src="imForSite/linkedin-logo.png" alt="linkedin logo">
 										</a>
 								</li>
@@ -199,13 +199,12 @@ if (isset($_POST['add']))                                   //проверка одправлен
 						
 						
 							<div class="row" id="pricing">
-								<div class="col-sm-6">
+								<div class="col-sm-9" id="invisible">
 								</div>
 								
-								<div class="col-sm-6">
-									
-									<label for="example-time-input" class="col-sm-6 col-form-label"><h4>Final price</h4></label>
-									<div class="col-sm-12 price" style="padding: 0px; "> 
+								<div class="col-sm-3" 	>						
+									<label class="col-sm-12"><h4>Final price</h4></label>
+									<div class="col-sm-12 price"> 
 										
 										<h4>50 $</h4>
 									</div>
@@ -386,7 +385,7 @@ if (isset($_POST['add']))                                   //проверка одправлен
 									<img src="imForSite/google-logo.png" alt="google logo">
 								</a>
 							</li>
-						<li id="linkedin"><a href="url">
+						<li id="linkedin"><a href="https://www.linkedin.com/in/maksymsavin/">
 									<img src="imForSite/linkedin-logo.png" alt="linkedin logo">
 								</a>
 						</li>
@@ -406,8 +405,11 @@ if (isset($_POST['add']))                                   //проверка одправлен
 					</ul>
 				</div>	
 				<div id ="rights">
-					<h5>MY V Bike Rental &copy; 2016</h5>
-				</div>
+				<h5>MY V Bike Rental &copy; 2016</h5>
+				<a href="http://pydega.com/">
+					<h5>Press this link to contact me.</h5>
+				</a>
+			</div>
 			</footer>
 				
 				<!-- script -->
