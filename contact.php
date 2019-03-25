@@ -12,9 +12,9 @@ $errFirstName = $errLastName = $errEmail = $errPhone = $errMessage = $errHuman =
         $message = $_POST['message'];
         $human = intval($_POST['human']);
          //valid address on your web server
-        $from = 'info@pydega.tk';
+        $from = 'info@xxxxxx';
         //your email address where you wish to receive mail
-        $to = 'max.savin3@gmail.com, ganajuriy@gmail.com, vladbidyuk@gmail.com'; 
+        $to = 'xxxxxxx, xxxx@gmail.com, xxxxx@gmail.com'; 
         $subject = 'MESSAGE FROM MY V Bikes';
         $headers = "From:$from\r\nReply-to:$email";
         $body = "From: $firstName $lastName\n E-Mail: $email\n Phone: $phone\n Message: $message";
