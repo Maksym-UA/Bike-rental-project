@@ -1,11 +1,11 @@
 <?php
-$connection = @mysql_connect("fdb5.biz.ht", "2117918_dbase", "bb3565bc") or die("Could not connect to MySQL server!");     // ïðèâîåíèå è ïîäêëþ÷åíèå ê ñåðâåðó
-$db = @mysql_select_db("2117918_dbase") or die("Could not select company database!");                                          // ïðèâîåíèå è ïîäëþ÷åíèå ê áàçå äàííèõ
-mysql_set_charset('utf8');                                              //êîäèðîâêà, äëÿ âèâîäà òåêñòà
+$connection = @mysql_connect("db_domain", "dbase_name", "password") or die("Could not connect to MySQL server!");     // Ã¯Ã°Ã¨Ã¢Ã®Ã¥Ã­Ã¨Ã¥ Ã¨ Ã¯Ã®Ã¤ÃªÃ«Ã¾Ã·Ã¥Ã­Ã¨Ã¥ Ãª Ã±Ã¥Ã°Ã¢Ã¥Ã°Ã³
+$db = @mysql_select_db("2117918_dbase") or die("Could not select company database!");                                          // Ã¯Ã°Ã¨Ã¢Ã®Ã¥Ã­Ã¨Ã¥ Ã¨ Ã¯Ã®Ã¤Ã«Ã¾Ã·Ã¥Ã­Ã¨Ã¥ Ãª Ã¡Ã Ã§Ã¥ Ã¤Ã Ã­Ã­Ã¨Ãµ
+mysql_set_charset('utf8');                                              //ÃªÃ®Ã¤Ã¨Ã°Ã®Ã¢ÃªÃ , Ã¤Ã«Ã¿ Ã¢Ã¨Ã¢Ã®Ã¤Ã  Ã²Ã¥ÃªÃ±Ã²Ã 
 
 if (!$connection || !$db)
 {   
-    exit(mysql_error());                            // óñëîâèå(åñëè íå ïîäêëþ÷èëîñü ='exit(mysql_error());'
+    exit(mysql_error());                            // Ã³Ã±Ã«Ã®Ã¢Ã¨Ã¥(Ã¥Ã±Ã«Ã¨ Ã­Ã¥ Ã¯Ã®Ã¤ÃªÃ«Ã¾Ã·Ã¨Ã«Ã®Ã±Ã¼ ='exit(mysql_error());'
 }
 
 
